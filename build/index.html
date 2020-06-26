@@ -50,8 +50,46 @@
   </head>
 
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <button id="darkmode">
+        ...
+      </button>
 
+      <span id="content">Philippe Castor</span>
+
+      <div class="button-container">
+        <button id="btn-random" value="Refresh">
+          Générer une identité
+        </button>
+        <button id="btn-copy" value="Copy">
+          Copier
+        </button>
+      </div>
+
+      <div class="settings">
+        <input type="radio" id="all" name="name-gender" value="all" checked />
+        <label for="all">
+          Mixte
+        </label>
+
+        <input type="radio" id="male" name="name-gender" value="M" />
+        <label for="male">
+          Masculin
+        </label>
+
+        <input type="radio" id="female" name="name-gender" value="F" />
+        <label for="female">
+          Féminin
+        </label>
+
+        <input type="checkbox" id="title" name="title" />
+        <label for="title">
+          Titre
+        </label>
+      </div>
+
+      <span id="counter">La machine est cassée ...</span>
+    </div>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
