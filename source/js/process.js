@@ -47,9 +47,11 @@ btnCopy.addEventListener("click", () => {
 /* Init */
 
 document.addEventListener("DOMContentLoaded", function () {
-  printRandomAscii();
+  printAsciiRandom();
   applyDarkmode();
 
   counter.innerHTML =
-    "Actuellement " + beautifyNumber(getNamesPossibilities()) + " combinaisons possibles.";
+    "Actuellement " +
+    beautifyNumber(getNamesPossibilities()) +
+    " combinaisons possibles.";
 });

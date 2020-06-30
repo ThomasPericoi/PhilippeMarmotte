@@ -99,6 +99,18 @@ function beautifyNumber(x) {
 
 /* Functions about styles */
 
+function isLight(color) {
+  // Var(s)
+  const hex = color.replace("#", "");
+  const r = parseInt(hex.substr(0, 2), 16);
+  const g = parseInt(hex.substr(2, 2), 16);
+  const b = parseInt(hex.substr(4, 2), 16);
+  // Process
+  const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+  // Output
+  return brightness > 155;
+}
+
 function changeElementBgColor(element, color) {
   // Output
   element.style.backgroundColor = color;
@@ -117,7 +129,6 @@ function transformToBlob(element) {
     var percentage4bis = 100 - percentage4;
     return `${percentage1}% ${percentage1bis}% ${percentage2bis}% ${percentage2}% / ${percentage3}% ${percentage4}% ${percentage4bis}% ${percentage3bis}%`;
   }
-
   // Output
   element.style.borderRadius = randomRadius();
 }
@@ -133,7 +144,7 @@ function copyToClipboard(value) {
   temporaryInput.select();
   // Output
   document.execCommand("copy");
-  console.log("%c" + value + " a été copié avec succès", "color: green");
+  console.log('%c"' + value + '" a été copié avec succès', "color: green");
   // Cleaning
   document.body.removeChild(temporaryInput);
 }
