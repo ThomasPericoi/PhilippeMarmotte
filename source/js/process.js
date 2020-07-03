@@ -20,6 +20,7 @@ function applyDarkmode() {
 btnDarkmode.addEventListener("click", () => {
   darkmode = !darkmode;
   applyDarkmode();
+  transformToBlob(btnDarkmode);
 });
 
 /* Philippe Marmotte Frontend */
@@ -27,9 +28,10 @@ btnDarkmode.addEventListener("click", () => {
 var btnRandom = document.getElementById("btn-random");
 var btnCopy = document.getElementById("btn-copy");
 var content = document.getElementById("content");
-var counter = document.getElementById("counter");
+var possibilities = document.getElementById("possibilities");
 var title = document.getElementById("title");
 var genders = document.getElementsByName("name-gender");
+var btnGithub = document.getElementById("btn-github");
 
 btnRandom.addEventListener("click", () => {
   for (var i = 0; i < genders.length; i++) {
@@ -38,20 +40,31 @@ btnRandom.addEventListener("click", () => {
     }
   }
   content.innerHTML = getRandomPerson(checkedGender, title.checked);
+  transformToBlob(btnRandom);
 });
 
 btnCopy.addEventListener("click", () => {
   copyToClipboard(content.innerHTML);
+  transformToBlob(btnCopy);
 });
+
+btnGithub.addEventListener("click", () => {
+  transformToBlob(btnGithub);
+});
+
+transformToBlob(btnDarkmode);
+transformToBlob(btnRandom);
+transformToBlob(btnCopy);
+transformToBlob(btnGithub);
 
 /* Init */
 
 document.addEventListener("DOMContentLoaded", function () {
-  printAsciiRandom();
   applyDarkmode();
+  printAsciiRandom();
 
-  counter.innerHTML =
-    "Actuellement " +
+  possibilities.innerHTML =
+    "Actuellement <u>" +
     beautifyNumber(getNamesPossibilities()) +
-    " combinaisons possibles.";
+    "</u> combinaisons possibles.";
 });

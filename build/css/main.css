@@ -1,0 +1,345 @@
+/*____________________________________ IMPORT ____________________________________*/
+/* Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+/*____________________________________ RESET ____________________________________*/
+/* Normalize Reset (reduced) */
+body {
+  margin: 0; }
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%; }
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+a {
+  background-color: transparent; }
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline; }
+
+b,
+strong {
+  font-weight: bolder; }
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+img {
+  border-style: none; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0; }
+
+button,
+input {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  background-color: unset; }
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal; }
+
+progress {
+  vertical-align: baseline; }
+
+textarea {
+  overflow: auto; }
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+[type="search"] {
+  outline-offset: -2px; }
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  font: inherit; }
+
+details {
+  display: block; }
+
+summary {
+  display: list-item; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+/* My reset */
+* {
+  font-family: "Indie Flower", cursive;
+  color: #0a0a0a;
+  transition: color ease 0.5s; }
+  .darkmode * {
+    color: #f9f9f9; }
+
+body {
+  background-color: #f9f9f9;
+  transition: background ease 0.5s; }
+  body.darkmode {
+    background-color: #0a0a0a; }
+
+.fade-in {
+  -webkit-animation: fadeIn ease 1s;
+          animation: fadeIn ease 1s; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*____________________________________ COMPONENTS ____________________________________*/
+/* Buttons */
+.btn {
+  box-sizing: border-box;
+  padding: 15px 20px;
+  color: #0a0a0a;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #0a0a0a;
+  transition: all ease 0.5s; }
+  .btn.dashed {
+    border-style: dashed; }
+  .btn.large {
+    padding: 30px 35px;
+    font-size: 22px; }
+  .darkmode .btn {
+    color: #f9f9f9;
+    border-color: #f9f9f9; }
+
+/* Radio & checkbox */
+.radio,
+.checkbox {
+  padding: 0.8rem; }
+  .radio input[type="radio"],
+  .radio input[type="checkbox"],
+  .checkbox input[type="radio"],
+  .checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0; }
+    .radio input[type="radio"] + label,
+    .radio input[type="checkbox"] + label,
+    .checkbox input[type="radio"] + label,
+    .checkbox input[type="checkbox"] + label {
+      cursor: pointer; }
+      .radio input[type="radio"] + label:before,
+      .radio input[type="checkbox"] + label:before,
+      .checkbox input[type="radio"] + label:before,
+      .checkbox input[type="checkbox"] + label:before {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        position: relative;
+        top: -0.05rem;
+        margin-right: 1rem;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        cursor: pointer;
+        border-width: 1px;
+        border-color: #0a0a0a;
+        transition: all 200ms ease; }
+        .darkmode .radio input[type="radio"] + label:before, .darkmode
+        .radio input[type="checkbox"] + label:before, .darkmode
+        .checkbox input[type="radio"] + label:before, .darkmode
+        .checkbox input[type="checkbox"] + label:before {
+          border-color: #f9f9f9; }
+    .radio input[type="radio"]:checked + label:before,
+    .radio input[type="checkbox"]:checked + label:before,
+    .checkbox input[type="radio"]:checked + label:before,
+    .checkbox input[type="checkbox"]:checked + label:before {
+      background-color: #0a0a0a; }
+      .darkmode .radio input[type="radio"]:checked + label:before, .darkmode
+      .radio input[type="checkbox"]:checked + label:before, .darkmode
+      .checkbox input[type="radio"]:checked + label:before, .darkmode
+      .checkbox input[type="checkbox"]:checked + label:before {
+        background-color: #f9f9f9; }
+
+.radio input[type="radio"] + label:before {
+  border-radius: 50% 50% 53% 47% / 31% 58% 42% 69%;
+  border-style: solid; }
+
+.checkbox input[type="checkbox"] + label:before {
+  border-radius: 10%;
+  border-style: dashed; }
+
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.topbar,
+.footer {
+  padding: 15px;
+  display: flex;
+  -webkit-animation: fadeIn ease 1.5s;
+          animation: fadeIn ease 1.5s; }
+  @media screen and (min-width: 768px) {
+    .topbar,
+    .footer {
+      padding: 15px 35px; } }
+
+.topbar {
+  margin-bottom: 1rem;
+  align-items: center; }
+  @media screen and (min-width: 768px) {
+    .topbar {
+      margin-bottom: 3rem; } }
+
+.footer {
+  margin-top: 1rem;
+  align-items: flex-end; }
+  @media screen and (min-width: 768px) {
+    .footer {
+      margin-top: 3rem; } }
+
+.sitename {
+  font-size: 1.2rem; }
+  @media screen and (min-width: 768px) {
+    .sitename {
+      width: 120px;
+      margin-left: auto;
+      margin-right: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0; } }
+
+.btn#darkmode {
+  margin-left: auto; }
+
+.credits {
+  min-width: 110px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+#content {
+  padding-right: 15px;
+  padding-left: 15px;
+  font-family: "Rancho", cursive;
+  font-size: 3.2rem;
+  text-align: center;
+  -webkit-animation: fadeIn ease 1.5s 0.4s;
+          animation: fadeIn ease 1.5s 0.4s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards; }
+  @media screen and (min-width: 768px) {
+    #content {
+      font-size: 4.2rem; } }
+
+.container {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-animation: fadeIn ease 1.5s 0.25s;
+          animation: fadeIn ease 1.5s 0.25s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards; }
+
+.button-container {
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .button-container {
+      margin-top: 2rem; } }
+  .button-container .btn {
+    margin: 0.4rem; }
+
+@media screen and (min-width: 768px) {
+  .settings {
+    display: flex;
+    flex-wrap: wrap; } }

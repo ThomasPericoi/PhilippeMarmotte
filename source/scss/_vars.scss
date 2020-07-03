@@ -90,7 +90,7 @@ $white: #ffffff;
 // Web Safe
 
 $arial: Arial, Helvetica, sans-serif;
-$arialBlack: "Arial Black", Gadget, sans-serif;
+$arial-black: "Arial Black", Gadget, sans-serif;
 $comic: "Comic Sans MS", cursive, sans-serif;
 $courier: "Courier", monospace;
 $courier-new: "Courier New", Courier, monospace;
@@ -104,14 +104,22 @@ $times: "Times New Roman", Times, serif;
 $trebuchet: "Trebuchet MS", Helvetica, sans-serif;
 $verdana: Verdana, Geneva, sans-serif;
 
+// Imported
+
+$indie-flower: "Indie Flower", cursive;
+$rancho: "Rancho", cursive;
+
 //____________________________________ BREAKPOINTS ____________________________________
 
-//____________________________________ EASINGS ____________________________________
+$xs: 0px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
 
-$elastic-in: cubic-bezier(0.375, 0.11, 0.725, -0.6);
-$elastic-out: cubic-bezier(0.24, 1.65, 0.425, 0.92);
+//____________________________________ MY VARIABLES ____________________________________
 
-//____________________________________ YOUR VARIABLES ____________________________________
+$base-font: $indie-flower;
+$secondary-font: $rancho;
 
-$base-font: $courier-new;
 $darkmode-transition: 0.5s;

@@ -50,55 +50,72 @@
   </head>
 
   <body>
-    <div class="container">
-      <button id="darkmode" value="darkmode">
-        Darkmode
-      </button>
-
-      <span id="content">Philippe Castor</span>
-
-      <div class="button-container">
-        <button id="btn-random" value="Refresh">
-          Générer une identité
-        </button>
-        <button id="btn-copy" value="Copy">
-          Copier
+    <div class="wrapper">
+      <div class="topbar">
+        <h1 class="sitename">Philippe Castor</h1>
+        <button id="darkmode" class="btn dashed" value="darkmode">
+          Darkmode
         </button>
       </div>
 
-      <div class="settings">
-        <input type="radio" id="all" name="name-gender" value="all" checked />
-        <label for="all">
-          Mixte
-        </label>
+      <div id="content" ">Philippe Castor</div>
 
-        <input type="radio" id="male" name="name-gender" value="M" />
-        <label for="male">
-          Masculin
-        </label>
+      <div class="container">
+        <div class="button-container">
+          <button id="btn-random" class="btn large" value="Refresh">
+            Générer une identité
+          </button>
+          <button id="btn-copy" class="btn large dashed" value="Copy">
+            Copier
+          </button>
+        </div>
 
-        <input type="radio" id="female" name="name-gender" value="F" />
-        <label for="female">
-          Féminin
-        </label>
+        <div class="settings">
+          <div class="radio">
+            <input
+              type="radio"
+              id="all"
+              name="name-gender"
+              value="all"
+              checked
+            />
+            <label for="all">Mixte</label>
+          </div>
 
-        <input type="checkbox" id="title" name="title" />
-        <label for="title">
-          Titre
-        </label>
+          <div class="radio">
+            <input type="radio" id="male" name="name-gender" value="M" />
+            <label for="male">Masculin</label>
+          </div>
+
+          <div class="radio">
+            <input type="radio" id="female" name="name-gender" value="F" />
+            <label for="female">Féminin</label>
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox" id="title" name="title" />
+            <label for="title">En utilisant un titre</label>
+          </div>
+        </div>
       </div>
 
-      <span id="counter">La machine est cassée ...</span>
-
-      <div class="credits">
-        <span>Réalisé par Thomas Pericoi</span>
-        <a
-          href="https://github.com/ThomasPericoi"
-          target="_blank"
-          title="Le repository associé au projet"
-          alt="GitHub"
-          >GitHub</a
+      <div class="footer">
+        <span id="possibilities" class="possibilities"
+          >La machine est cassée ...</span
         >
+
+        <div class="credits">
+          <span>Thomas Pericoi</span>
+          <a
+            href="https://github.com/ThomasPericoi/PhilippeMarmotte"
+            target="_blank"
+            id="btn-github"
+            class="btn dashed"
+            title="Le repository associé au projet"
+            alt="GitHub"
+            >GitHub</a
+          >
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="js/main.js"></script>

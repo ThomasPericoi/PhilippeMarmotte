@@ -1,4 +1,4 @@
-/*____________________________________ MUST-HAVE FUNCTIONS ____________________________________*/
+/*____________________________________ USEFOOL FUNCTIONS ____________________________________*/
 
 /* Functions about random */
 
@@ -89,7 +89,7 @@ function isConsonant(x) {
 
 function isVowel(x) {
   // Output
-  return ["a", "e", "i", "o", "u"].indexOf(x.toLowerCase()) !== -1;
+  return ["a", "e", "i", "o", "u", "y"].indexOf(x.toLowerCase()) !== -1;
 }
 
 function beautifyNumber(x) {
@@ -147,4 +147,18 @@ function copyToClipboard(value) {
   console.log('%c"' + value + '" a été copié avec succès', "color: green");
   // Cleaning
   document.body.removeChild(temporaryInput);
+}
+
+/* Functions about Google and searching */
+
+function searchOnGoogle(query) {
+  window.open("https://google.com/search?q=" + query, "newTab");
+}
+
+function searchOnGoogleImage(query) {
+  window.open("https://google.com/search?q=" + query + "&tbm=isch", "newTab");
+}
+
+function openUrl(query) {
+  window.open(query, "newTab");
 }
