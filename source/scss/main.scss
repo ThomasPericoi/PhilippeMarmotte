@@ -56,7 +56,7 @@ body {
 
 .sitename {
   @media screen and (min-width: $md) {
-    width: 120px;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
 

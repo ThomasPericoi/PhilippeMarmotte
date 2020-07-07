@@ -288,7 +288,9 @@ body {
   font-size: 1.2rem; }
   @media screen and (min-width: 768px) {
     .sitename {
-      width: 120px;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
       margin-left: auto;
       margin-right: auto;
       position: absolute;
