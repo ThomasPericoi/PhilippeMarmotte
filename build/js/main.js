@@ -840,7 +840,7 @@ btnRandom.addEventListener("click", () => {
       var checkedGender = genders[i].value;
     }
   }
-  content.innerHTML = getRandomPerson(checkedGender, title.checked);
+  content.innerHTML = getRandomIdentity(checkedGender, title.checked);
   transformToBlob(btnRandom);
 });
 
@@ -7238,7 +7238,7 @@ function getRandomTitle(gender = "all") {
   return `${title.value}`;
 }
 
-function getRandomPerson(gender = "all", title = false) {
+function getRandomIdentity(gender = "all", title = false) {
   // Process
   gender === "F" ||
     gender === "M" ||

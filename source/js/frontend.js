@@ -39,7 +39,7 @@ btnRandom.addEventListener("click", () => {
       var checkedGender = genders[i].value;
     }
   }
-  content.innerHTML = getRandomPerson(checkedGender, title.checked);
+  content.innerHTML = getRandomIdentity(checkedGender, title.checked);
   transformToBlob(btnRandom);
 });
 

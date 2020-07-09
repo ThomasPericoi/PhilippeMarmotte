@@ -45,7 +45,7 @@ function getRandomTitle(gender = "all") {
   return `${title.value}`;
 }
 
-function getRandomPerson(gender = "all", title = false) {
+function getRandomIdentity(gender = "all", title = false) {
   // Process
   gender === "F" ||
     gender === "M" ||
