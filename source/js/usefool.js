@@ -144,7 +144,7 @@ function copyToClipboard(value) {
   temporaryInput.select();
   // Output
   document.execCommand("copy");
-  console.log('%c"' + value + '" a été copié avec succès', "color: green");
+  console.log('%c"' + value + '" a été copié avec succès !', "color: green");
   // Cleaning
   document.body.removeChild(temporaryInput);
 }
