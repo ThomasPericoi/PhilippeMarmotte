@@ -10,10 +10,16 @@ function applyDarkmode() {
     document.body.classList.add("darkmode");
     btnDarkmode.innerHTML = "Allumer";
     console.log("On éteint les lumières...");
+    document
+      .querySelector("meta[name=theme-color]")
+      .setAttribute("content", "#2b2b2b");
   } else {
     document.body.classList.remove("darkmode");
     btnDarkmode.innerHTML = "Éteindre";
     console.log("Et on allume les lumières !");
+    document
+      .querySelector("meta[name=theme-color]")
+      .setAttribute("content", "#eeeeee");
   }
 }
 

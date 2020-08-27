@@ -1310,6 +1310,10 @@ var firstNames = [
     gender: "F",
   },
   {
+    value: "Delilah",
+    gender: "F",
+  },
+  {
     value: "Delphine",
     gender: "F",
   },
@@ -5274,6 +5278,7 @@ var lastNames = [
   "Dinde",
   "Dindon",
   "Dingo",
+  "Disco",
   "Djembé",
   "Dodo",
   "Dofus",
