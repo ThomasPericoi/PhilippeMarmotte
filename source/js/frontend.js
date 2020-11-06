@@ -5,6 +5,16 @@
 var btnDarkmode = document.getElementById("darkmode");
 var darkmode = false;
 
+function isNightTime() {
+  var currentHour = new Date().getHours();
+  var nightTime = false;
+
+  (currentHour >= 20 || currentHour <= 6) && (nightTime = true);
+  return nightTime;
+}
+
+isNightTime() && (darkmode = true);
+
 function applyDarkmode() {
   if (darkmode) {
     document.body.classList.add("darkmode");
