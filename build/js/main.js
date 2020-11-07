@@ -850,14 +850,29 @@ var title = document.getElementById("title");
 var genders = document.getElementsByName("name-gender");
 var btnGithub = document.getElementById("btn-github");
 
-btnRandom.addEventListener("click", () => {
-  for (var i = 0; i < genders.length; i++) {
-    if (genders[i].checked) {
-      var checkedGender = genders[i].value;
+function changeContent() {
+  document.body.classList.add("transition");
+  setTimeout(() => {
+    for (var i = 0; i < genders.length; i++) {
+      if (genders[i].checked) {
+        var checkedGender = genders[i].value;
+      }
     }
-  }
-  content.innerHTML = getRandomIdentity(checkedGender, title.checked);
+    content.innerHTML = getRandomIdentity(checkedGender, title.checked);
+    document.body.classList.remove("transition");
+  }, 250);
+}
+
+btnRandom.addEventListener("click", () => {
+  changeContent();
   transformToBlob(btnRandom);
+});
+
+document.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13 || event.keyCode === 32) {
+    changeContent();
+    transformToBlob(btnRandom);
+  }
 });
 
 btnCopy.addEventListener("click", () => {

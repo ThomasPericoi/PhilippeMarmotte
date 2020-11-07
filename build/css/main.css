@@ -275,18 +275,16 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  -webkit-animation: fadeIn ease-in 1s;
+          animation: fadeIn ease-in 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards; }
 
 .topbar,
 .footer {
   padding: 15px;
-  display: flex;
-  -webkit-animation: fadeIn ease 1.5s;
-          animation: fadeIn ease 1.5s; }
-  @media screen and (min-width: 768px) {
-    .topbar,
-    .footer {
-      padding: 15px 35px; } }
+  display: flex; }
 
 .topbar {
   margin-bottom: 1rem;
@@ -332,10 +330,10 @@ body {
   font-family: "Rancho", cursive;
   font-size: 3.2rem;
   text-align: center;
-  -webkit-animation: fadeIn ease 1.5s 0.4s;
-          animation: fadeIn ease 1.5s 0.4s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards; }
+  opacity: 1;
+  transition: opacity ease 250ms; }
+  .transition #content {
+    opacity: 0; }
   @media screen and (min-width: 768px) {
     #content {
       font-size: 4.2rem; } }
@@ -345,11 +343,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
-  padding-left: 15px;
-  -webkit-animation: fadeIn ease 1.5s 0.25s;
-          animation: fadeIn ease 1.5s 0.25s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards; }
+  padding-left: 15px; }
 
 .button-container {
   text-align: center; }
