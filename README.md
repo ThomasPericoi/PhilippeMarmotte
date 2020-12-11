@@ -1,3 +1,5 @@
+![Image of Yaktocat](https://github.com/ThomasPericoi/PhilippeMarmotte/blob/master/philippemarmotte.svg?raw=true)
+
 # Philippe Marmotte
 
 Philippe Marmotte est un générateur d'identités loufoque, un des rares endroits encore fun de l'interweb.
