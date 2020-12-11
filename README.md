@@ -1,4 +1,4 @@
-![Image of Yaktocat](https://github.com/ThomasPericoi/PhilippeMarmotte/blob/master/philippemarmotte.svg?raw=true)
+![Logo de Philippe Marmotte](https://github.com/ThomasPericoi/PhilippeMarmotte/blob/master/philippemarmotte.svg?raw=true)
 
 # Philippe Marmotte
 
