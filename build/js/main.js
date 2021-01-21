@@ -1,14 +1,3 @@
-/*____________________________________ USEFOOL FUNCTIONS ____________________________________*/
-
-function getRandomIdFromArray(arrayName) {
-  // Output
-  return Math.floor(Math.random() * arrayName.length);
-}
-
-function getRandomValueFromArray(arrayName) {
-  // Output
-  return arrayName[getRandomIdFromArray(arrayName)];
-}
 
 /*____________________________________ ASCIIS FUNCTIONS ____________________________________*/
 
@@ -893,6 +882,7 @@ transformToBlob(btnGithub);
 
 document.addEventListener("DOMContentLoaded", function () {
   applyDarkmode();
+  changeTitleOnBlur("On peut plus rien dire...");
   printAsciiRandom();
 
   possibilities.innerHTML =
@@ -1052,7 +1042,10 @@ function copyToClipboard(value) {
   temporaryInput.select();
   // Output
   document.execCommand("copy");
-  console.log('%c"' + value + '" a été copié avec succès !', "color: green");
+  console.log(
+    '%c"' + value + '" successfully copied to clipboard!',
+    "color: green"
+  );
   // Cleaning
   document.body.removeChild(temporaryInput);
 }
@@ -1069,6 +1062,20 @@ function searchOnGoogleImage(query) {
 
 function openUrl(query) {
   window.open(query, "newTab");
+}
+
+/* Functions about page title */
+
+function changeTitleOnBlur(string) {
+  var originalTitle = document.title;
+
+  window.onfocus = function () {
+    document.title = originalTitle;
+  };
+
+  window.onblur = function () {
+    document.title = string;
+  };
 }
 
 /*____________________________________ PHILIPPE MARMOTTE LIBRARY ____________________________________*/

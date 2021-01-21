@@ -92,6 +92,7 @@ transformToBlob(btnGithub);
 
 document.addEventListener("DOMContentLoaded", function () {
   applyDarkmode();
+  changeTitleOnBlur("On peut plus rien dire...");
   printAsciiRandom();
 
   possibilities.innerHTML =

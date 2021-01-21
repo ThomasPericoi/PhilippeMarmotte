@@ -149,7 +149,10 @@ function copyToClipboard(value) {
   temporaryInput.select();
   // Output
   document.execCommand("copy");
-  console.log('%c"' + value + '" a été copié avec succès !', "color: green");
+  console.log(
+    '%c"' + value + '" successfully copied to clipboard!',
+    "color: green"
+  );
   // Cleaning
   document.body.removeChild(temporaryInput);
 }
@@ -166,4 +169,18 @@ function searchOnGoogleImage(query) {
 
 function openUrl(query) {
   window.open(query, "newTab");
+}
+
+/* Functions about page title */
+
+function changeTitleOnBlur(string) {
+  var originalTitle = document.title;
+
+  window.onfocus = function () {
+    document.title = originalTitle;
+  };
+
+  window.onblur = function () {
+    document.title = string;
+  };
 }
