@@ -144,6 +144,9 @@ template {
   font-family: "Indie Flower", cursive;
   color: #0a0a0a;
   transition: color ease 0.5s; }
+  @media screen and (min-width: 1920px) {
+    * {
+      font-size: 18px; } }
   .darkmode * {
     color: #f9f9f9; }
 
@@ -336,6 +339,9 @@ body {
   @media screen and (min-width: 768px) {
     #content {
       font-size: 4.2rem; } }
+  @media screen and (min-width: 1920px) {
+    #content {
+      font-size: 5rem; } }
 
 .container {
   position: relative;

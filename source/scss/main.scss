@@ -109,6 +109,9 @@ body {
   @media screen and (min-width: $md-min) {
     font-size: 4.2rem;
   }
+  @media screen and (min-width: $xxl-min) {
+    font-size: 5rem;
+  }
 }
 
 .container {

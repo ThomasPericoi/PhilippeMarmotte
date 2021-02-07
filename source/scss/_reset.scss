@@ -175,6 +175,10 @@ template {
   color: $ebony;
   transition: color ease $darkmode-transition;
 
+  @media screen and (min-width: $xxl-min) {
+    font-size: 18px;
+  }
+
   .darkmode & {
     color: $almost-white;
   }

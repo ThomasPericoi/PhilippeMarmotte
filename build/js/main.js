@@ -1542,6 +1542,10 @@ var firstNames = [
     gender: "M",
   },
   {
+    value: "Assan",
+    gender: "M",
+  },
+  {
     value: "Astérix",
     gender: "M",
   },
@@ -1619,6 +1623,10 @@ var firstNames = [
   },
   {
     value: "Barbie",
+    gender: "F",
+  },
+  {
+    value: "Barbora",
     gender: "F",
   },
   {
@@ -2006,6 +2014,10 @@ var firstNames = [
     gender: "M",
   },
   {
+    value: "Chadwick",
+    gender: "M",
+  },
+  {
     value: "Chandler",
     gender: "M",
   },
@@ -2146,6 +2158,10 @@ var firstNames = [
     gender: "M",
   },
   {
+    value: "Cletus",
+    gender: "M",
+  },
+  {
     value: "Cliff",
     gender: "M",
   },
@@ -2179,6 +2195,10 @@ var firstNames = [
   },
   {
     value: "Clémentine",
+    gender: "F",
+  },
+  {
+    value: "Cléopâtre",
     gender: "F",
   },
   {
@@ -3386,6 +3406,14 @@ var firstNames = [
     gender: "M",
   },
   {
+    value: "Ignace",
+    gender: "M",
+  },
+  {
+    value: "Ignazio",
+    gender: "M",
+  },
+  {
     value: "Ilona",
     gender: "F",
   },
@@ -3431,6 +3459,10 @@ var firstNames = [
   },
   {
     value: "Ivan",
+    gender: "M",
+  },
+  {
+    value: "Ivar",
     gender: "M",
   },
   {
@@ -3491,6 +3523,10 @@ var firstNames = [
   },
   {
     value: "Jamy",
+    gender: "M",
+  },
+  {
+    value: "Jan",
     gender: "M",
   },
   {
@@ -4051,6 +4087,10 @@ var firstNames = [
   },
   {
     value: "Lúcio",
+    gender: "M",
+  },
+  {
+    value: "Luke",
     gender: "M",
   },
   {
@@ -4782,6 +4822,10 @@ var firstNames = [
     gender: "F",
   },
   {
+    value: "Petri",
+    gender: "M",
+  },
+  {
     value: "Phil",
     gender: "M",
   },
@@ -5011,6 +5055,10 @@ var firstNames = [
   },
   {
     value: "Rico",
+    gender: "M",
+  },
+  {
+    value: "Rigobert",
     gender: "M",
   },
   {
@@ -5394,7 +5442,15 @@ var firstNames = [
     gender: "M",
   },
   {
+    value: "Sienna",
+    gender: "F",
+  },
+  {
     value: "Sigismund",
+    gender: "M",
+  },
+  {
+    value: "Sigmund",
     gender: "M",
   },
   {
@@ -7208,12 +7264,14 @@ var lastNamePrefixes = [
   "Al ",
   "ben ",
   "Black ",
+  "Crypto-",
   "Cyber-",
   "Dark ",
   "de ",
   "del ",
   "Di ",
   "e",
+  "Giga ",
   "Hyper ",
   "Master ",
   "Maxi ",
