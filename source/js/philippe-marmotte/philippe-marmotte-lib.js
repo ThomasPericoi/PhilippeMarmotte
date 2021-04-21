@@ -1586,6 +1586,10 @@ var firstNames = [
     gender: "M",
   },
   {
+    value: "Enola",
+    gender: "F",
+  },
+  {
     value: "Enora",
     gender: "F",
   },
@@ -4478,6 +4482,10 @@ var firstNames = [
     gender: "F",
   },
   {
+    value: "Suri",
+    gender: "F",
+  },
+  {
     value: "Suzanne",
     gender: "F",
   },
@@ -5581,6 +5589,7 @@ var lastNames = [
   "Parapluie",
   "Passif",
   "Password",
+  "Pastille",
   "Pastis",
   "Patate",
   "PDF",
