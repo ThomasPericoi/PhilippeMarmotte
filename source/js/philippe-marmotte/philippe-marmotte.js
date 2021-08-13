@@ -2,14 +2,28 @@
 
 function getRandomFirstName(gender = "all") {
   // Var(s)
+  var rarity = "";
   var prefix = "";
+  // Process - Rarity
+  if (probability(7)) {
+    rarity = "L"
+  }
+  else if (probability(15)) {
+    rarity = "R"
+  }
+  else if (probability(30)) {
+    rarity = "U"
+  }
+  else {
+    rarity = "C"
+  }
   // Process - First Name
-  var selectedFirstNames = firstNames.filter((name) => name.gender === gender); // Select the names matching the gender
+  var selectedFirstNames = firstNames.filter((name) => name.gender === gender && name.rarity === rarity); // Select the names matching the gender and rarity
   selectedFirstNames.length < 1 &&
     (selectedFirstNames = Object.values(firstNames)); // If empty or nothing is matching, select them all
   var firstName = getRandomValueFromArray(selectedFirstNames);
   // Process - Prefix
-  if (probability(10)) {
+  if (probability(7)) {
     var selectedPrefixes = firstNamePrefixes.filter(
       (name) => name.gender === firstName.gender
     ); // Select the prefixes matching the selected name gender
@@ -30,8 +44,8 @@ function getRandomLastName() {
   probability(0)
     ? (lastName = getRandomFirstName("male"))
     : (lastName = getRandomValueFromArray(lastNames));
-  probability(10) && (secondName = "-" + getRandomValueFromArray(lastNames));
-  probability(7) && (suffix = getRandomValueFromArray(lastNameSuffixes));
+  probability(7) && (secondName = "-" + getRandomValueFromArray(lastNames));
+  probability(10) && (suffix = getRandomValueFromArray(lastNameSuffixes));
   // Output
   return `${prefix}${lastName}${secondName}${suffix}`;
 }
@@ -51,9 +65,8 @@ function getRandomIdentity(gender = "all", title = false) {
     gender === "M" ||
     (probability(50) ? (gender = "M") : (gender = "F")); // If no valid gender is asked, go for or male or female
   // Output
-  return `${
-    title ? getRandomTitle(gender) : getRandomFirstName(gender)
-  } ${getRandomLastName()}`;
+  return `${title ? getRandomTitle(gender) : getRandomFirstName(gender)
+    } ${getRandomLastName()}`;
 }
 
 function getNamesPossibilities() {
