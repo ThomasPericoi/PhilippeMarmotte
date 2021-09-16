@@ -943,8 +943,10 @@ transformToBlob(btnGithub);
 /* Init */
 
 document.addEventListener("DOMContentLoaded", function () {
+  if (!isMobile()) {
+    changeTitleOnBlur("On peut plus rien dire...");
+  }
   applyDarkmode();
-  changeTitleOnBlur("On peut plus rien dire...");
   printAsciiRandom();
 
   possibilities.innerHTML =
