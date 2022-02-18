@@ -8294,6 +8294,14 @@ var lastNames = [
 
 var titles = [
   {
+    value: "Adjudant",
+    gender: "M",
+  },
+  {
+    value: "Adjudante",
+    gender: "F",
+  },
+  {
     value: "Agent",
     gender: "F",
   },
@@ -8315,6 +8323,10 @@ var titles = [
   },
   {
     value: "Capitaine",
+    gender: "M",
+  },
+  {
+    value: "Caporal",
     gender: "M",
   },
   {
@@ -8400,6 +8412,10 @@ var titles = [
   {
     value: "Mademoiselle",
     gender: "F",
+  },
+  {
+    value: "Maître",
+    gender: "M",
   },
   {
     value: "Mamie",
@@ -8538,6 +8554,10 @@ var titles = [
     gender: "F",
   },
   {
+    value: "Sir",
+    gender: "M",
+  },
+  {
     value: "Soeur",
     gender: "F",
   },
@@ -8632,6 +8652,8 @@ var firstNamePrefixes = [
 
 var lastNamePrefixes = [
   "Al ",
+  "Aqua",
+  "Bat",
   "ben ",
   "Black ",
   "Crousti-",
@@ -8656,6 +8678,7 @@ var lastNamePrefixes = [
   "Méga ",
   "O'",
   "Space ",
+  "Spider-",
   "Super-",
   "van ",
   "van der ",
@@ -8716,7 +8739,7 @@ function getRandomLastName() {
   var suffix = "";
   // Process
   probability(10) && (prefix = getRandomValueFromArray(lastNamePrefixes));
-  probability(0)
+  probability(1)
     ? (lastName = getRandomFirstName("male"))
     : (lastName = getRandomValueFromArray(lastNames));
   probability(7) && (secondName = "-" + getRandomValueFromArray(lastNames));

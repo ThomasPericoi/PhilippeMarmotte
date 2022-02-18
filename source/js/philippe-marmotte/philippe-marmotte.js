@@ -41,7 +41,7 @@ function getRandomLastName() {
   var suffix = "";
   // Process
   probability(10) && (prefix = getRandomValueFromArray(lastNamePrefixes));
-  probability(0)
+  probability(1)
     ? (lastName = getRandomFirstName("male"))
     : (lastName = getRandomValueFromArray(lastNames));
   probability(7) && (secondName = "-" + getRandomValueFromArray(lastNames));
