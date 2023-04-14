@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     changeTitleOnBlur("On peut plus rien dire...");
   }
   applyDarkmode();
-  printAsciiRandom();
+  printRandomAscii();
 
   possibilities.innerHTML =
     "Actuellement <u>" +
