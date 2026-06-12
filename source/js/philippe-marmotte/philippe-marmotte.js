@@ -1,26 +1,32 @@
 /*__________________________________ PHILIPPE MARMOTTE FUNCTIONS ____________________________________*/
 
+function normalizeGender(gender) {
+  return gender === "F" || gender === "M" ? gender : "all";
+}
+
 function getRandomFirstName(gender = "all") {
   // Var(s)
   var rarity = "";
   var prefix = "";
+  gender = normalizeGender(gender);
   // Process - Rarity
   if (probability(7)) {
-    rarity = "L"
-  }
-  else if (probability(15)) {
-    rarity = "R"
-  }
-  else if (probability(30)) {
-    rarity = "U"
-  }
-  else {
-    rarity = "C"
+    rarity = "L";
+  } else if (probability(15)) {
+    rarity = "R";
+  } else if (probability(30)) {
+    rarity = "U";
+  } else {
+    rarity = "C";
   }
   // Process - First Name
-  var selectedFirstNames = firstNames.filter((name) => name.gender === gender && name.rarity === rarity); // Select the names matching the gender and rarity
+  var selectedFirstNames = firstNames.filter(function (name) {
+    return (gender === "all" || name.gender === gender) && name.rarity === rarity;
+  }); // Select the names matching the gender and rarity
   selectedFirstNames.length < 1 &&
-    (selectedFirstNames = Object.values(firstNames)); // If empty or nothing is matching, select them all
+    (selectedFirstNames = firstNames.filter(function (name) {
+      return gender === "all" || name.gender === gender;
+    })); // If empty or nothing is matching, select the requested gender
   var firstName = getRandomValueFromArray(selectedFirstNames);
   // Process - Prefix
   if (probability(7)) {
@@ -42,7 +48,7 @@ function getRandomLastName() {
   // Process
   probability(10) && (prefix = getRandomValueFromArray(lastNamePrefixes));
   probability(1)
-    ? (lastName = getRandomFirstName("male"))
+    ? (lastName = getRandomFirstName("M"))
     : (lastName = getRandomValueFromArray(lastNames));
   probability(7) && (secondName = "-" + getRandomValueFromArray(lastNames));
   probability(10) && (suffix = getRandomValueFromArray(lastNameSuffixes));
@@ -52,6 +58,7 @@ function getRandomLastName() {
 
 function getRandomTitle(gender = "all") {
   // Process
+  gender = normalizeGender(gender);
   var selectedTitles = titles.filter((name) => name.gender === gender); // Select the titles matching the gender
   selectedTitles.length < 1 && (selectedTitles = Object.values(titles)); // If empty or nothing is matching, select them all
   var title = getRandomValueFromArray(selectedTitles);
@@ -61,9 +68,8 @@ function getRandomTitle(gender = "all") {
 
 function getRandomIdentity(gender = "all", title = false) {
   // Process
-  gender === "F" ||
-    gender === "M" ||
-    (probability(50) ? (gender = "M") : (gender = "F")); // If no valid gender is asked, go for or male or female
+  gender = normalizeGender(gender);
+  gender === "all" && (probability(50) ? (gender = "M") : (gender = "F")); // If no valid gender is asked, go for or male or female
   // Output
   return `${title ? getRandomTitle(gender) : getRandomFirstName(gender)
     } ${getRandomLastName()}`;

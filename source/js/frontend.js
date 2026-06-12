@@ -52,12 +52,14 @@ var btnGithub = document.getElementById("btn-github");
 function changeContent() {
   document.body.classList.add("transition");
   setTimeout(() => {
+    var checkedGender = "all";
+
     for (var i = 0; i < genders.length; i++) {
       if (genders[i].checked) {
-        var checkedGender = genders[i].value;
+        checkedGender = genders[i].value;
       }
     }
-    content.innerHTML = getRandomIdentity(checkedGender, title.checked);
+    content.textContent = getRandomIdentity(checkedGender, title.checked);
     document.body.classList.remove("transition");
   }, 250);
 }
@@ -75,7 +77,7 @@ document.addEventListener("keyup", function (event) {
 });
 
 btnCopy.addEventListener("click", () => {
-  copyToClipboard(content.innerHTML);
+  copyToClipboard(content.textContent);
   transformToBlob(btnCopy);
 });
 
