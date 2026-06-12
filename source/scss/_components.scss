@@ -1,0 +1,108 @@
+/*____________________________________ COMPONENTS ____________________________________*/
+
+/* Buttons */
+
+.btn {
+  box-sizing: border-box;
+  padding: 15px 20px;
+
+  color: $ebony;
+  text-align: center;
+  text-decoration: none;
+
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $ebony;
+
+  transition: all ease $darkmode-transition;
+
+  &.dashed {
+    border-style: dashed;
+  }
+
+  &.large {
+    padding: 30px 35px;
+    font-size: 22px;
+  }
+
+  .darkmode & {
+    color: $almost-white;
+    border-color: $almost-white;
+  }
+}
+
+/* Radio & checkbox */
+
+.radio,
+.checkbox {
+  padding: 0.8rem;
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+
+    + label {
+      cursor: pointer;
+      &:before {
+        content: "";
+
+        width: 1rem;
+        height: 1rem;
+        position: relative;
+        top: -0.05rem;
+        margin-right: 1rem;
+
+        display: inline-block;
+        vertical-align: top;
+
+        text-align: center;
+        cursor: pointer;
+
+        border-width: 1px;
+        border-color: $ebony;
+
+        transition: all 200ms ease;
+
+        .darkmode & {
+          border-color: $almost-white;
+        }
+      }
+    }
+
+    &:checked {
+      + label {
+        &:before {
+          background-color: $ebony;
+
+          .darkmode & {
+            background-color: $almost-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.radio {
+  input[type="radio"] {
+    + label {
+      &:before {
+        border-radius: 50% 50% 53% 47% / 31% 58% 42% 69%;
+        border-style: solid;
+      }
+    }
+  }
+}
+
+.checkbox {
+  input[type="checkbox"] {
+    + label {
+      &:before {
+        border-radius: 10%;
+        border-style: dashed;
+      }
+    }
+  }
+}
