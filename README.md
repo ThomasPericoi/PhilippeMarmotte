@@ -160,4 +160,4 @@ build/
 
 ## Licence
 
-ISC
+Ce projet est distribué sous licence MIT. Voir le fichier `LICENSE`.
