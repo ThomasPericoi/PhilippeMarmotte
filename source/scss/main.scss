@@ -9,12 +9,17 @@
 html,
 body {
   width: 100%;
-  background: repeating-linear-gradient(to right,
+  background:
+    repeating-linear-gradient(
+      to right,
       transparent 0 calc(35px - 1px),
-      rgba($ebony, 0.025) calc(35px - 1px) 35px),
-    repeating-linear-gradient(to bottom,
+      rgba($ebony, 0.025) calc(35px - 1px) 35px
+    ),
+    repeating-linear-gradient(
+      to bottom,
       transparent 0 calc(35px - 1px),
-      rgba($ebony, 0.025) calc(35px - 1px) 35px);
+      rgba($ebony, 0.025) calc(35px - 1px) 35px
+    );
 }
 
 .wrapper {

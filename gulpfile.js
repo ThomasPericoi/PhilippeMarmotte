@@ -1,31 +1,25 @@
 var gulp = require("gulp"),
-  autoprefixer = require("autoprefixer"),
-  assets = require("postcss-assets"),
+  cleanCss = require("gulp-clean-css"),
   concat = require("gulp-concat"),
-  cssnano = require("cssnano"),
-  deporder = require("gulp-deporder"),
-  htmlclean = require("gulp-htmlclean"),
-  imagemin = require("gulp-imagemin"),
-  newer = require("gulp-newer"),
-  postcss = require("gulp-postcss"),
-  sass = require("gulp-sass"),
-  stripdebug = require("gulp-strip-debug"),
-  uglify = require("gulp-uglify"),
-  devBuild = process.env.NODE_ENV !== "production",
+  gulpSass = require("gulp-sass"),
+  dartSass = require("sass"),
+  sass = gulpSass(dartSass),
+  terser = require("gulp-terser"),
+  devBuild =
+    process.env.NODE_ENV !== "production" &&
+    !process.argv.includes("--production"),
   folder = {
     source: "source/",
     build: "build/",
+    dist: "dist/",
   };
 
 // Images
 
 gulp.task("img", function () {
-  var out = folder.build + "img/";
   return gulp
     .src(folder.source + "img/**/*")
-    .pipe(newer(out))
-    .pipe(imagemin({ optimizationLevel: 5 }))
-    .pipe(gulp.dest(out));
+    .pipe(gulp.dest(folder.build + "img/"));
 });
 
 // HTML
@@ -33,16 +27,8 @@ gulp.task("img", function () {
 gulp.task(
   "html",
   gulp.series(gulp.parallel("img"), function () {
-    var out = folder.build,
-      page = gulp.src(folder.source + "*.html").pipe(newer(out));
-
-    if (!devBuild) {
-      page = page.pipe(htmlclean());
-      console.log("Cleaning HTML");
-    }
-
-    return page.pipe(gulp.dest(out));
-  })
+    return gulp.src(folder.source + "*.html").pipe(gulp.dest(folder.build));
+  }),
 );
 
 // CSS
@@ -50,38 +36,55 @@ gulp.task(
 gulp.task(
   "css",
   gulp.series(gulp.parallel("img"), function () {
-    var postCssOpts = [assets({ loadPaths: ["images/"] }), autoprefixer()];
+    var cssbuild = gulp.src(folder.source + "scss/main.scss").pipe(
+      sass({
+        outputStyle: "expanded",
+        precision: 3,
+      }).on("error", sass.logError),
+    );
 
     if (!devBuild) {
-      postCssOpts.push(cssnano);
+      cssbuild = cssbuild.pipe(cleanCss());
       console.log("Minifying CSS");
     }
 
-    return gulp
-      .src(folder.source + "scss/main.scss")
-      .pipe(
-        sass({
-          outputStyle: "nested",
-          imagePath: "images/",
-          precision: 3,
-          errLogToConsole: true,
-        })
-      )
-      .pipe(postcss(postCssOpts))
-      .pipe(gulp.dest(folder.build + "css/"));
-  })
+    return cssbuild.pipe(gulp.dest(folder.build + "css/"));
+  }),
 );
 
 // JS
 
+gulp.task("philippe-marmotte", function () {
+  var apiBuild = gulp
+    .src([
+      folder.source + "js/philippe-marmotte/philippe-marmotte-lib.js",
+      folder.source + "js/philippe-marmotte/philippe-marmotte-functions.js",
+    ])
+    .pipe(concat("philippe-marmotte.js"));
+
+  if (!devBuild) {
+    apiBuild = apiBuild.pipe(terser());
+  }
+
+  return apiBuild.pipe(gulp.dest(folder.dist));
+});
+
 gulp.task("js", function () {
   var jsbuild = gulp
-    .src([folder.source + "js/**/!(your)*.js", folder.source + "js/**/your.js"])
-    .pipe(deporder())
+    .src([
+      folder.source + "js/ascii-printer.js",
+      folder.source + "js/philippe-marmotte/philippe-marmotte-lib.js",
+      folder.source + "js/philippe-marmotte/philippe-marmotte-functions.js",
+      folder.source + "js/frontend.js",
+    ])
     .pipe(concat("main.js"));
 
   if (!devBuild) {
-    jsbuild = jsbuild.pipe(stripdebug()).pipe(uglify());
+    jsbuild = jsbuild.pipe(
+      terser({
+        compress: {},
+      }),
+    );
     console.log("Minifying JS");
   }
 
@@ -90,7 +93,10 @@ gulp.task("js", function () {
 
 // Build
 
-gulp.task("build", gulp.series("html", "css", "js"));
+gulp.task(
+  "build",
+  gulp.series("html", "css", gulp.parallel("js", "philippe-marmotte")),
+);
 
 // Watch
 

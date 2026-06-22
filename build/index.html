@@ -1,112 +1,130 @@
-<!DOCTYPE html>
-<html lang="fr-FR" dir="ltr" prefix="og: http://ogp.me/ns#">
+<!doctype html>
+<html lang="fr-FR" dir="ltr">
+  <head>
+    <!-- Basics -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
 
-<head>
-  <!-- Basics -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="css/main.css" />
-  <link rel="icon" type="image/png" href="img/favicon.png" />
+    <!-- For robots & browsers -->
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="google" content="notranslate" />
 
-  <!-- For robots & browsers -->
-  <meta name="robots" content="index,follow" />
-  <meta name="googlebot" content="index,follow" />
-  <meta name="google" content="notranslate" />
-  <meta name="google-site-verification" content="verification_token" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Content -->
+    <title>Philippe Marmotte - Générateur d'identité zinzin</title>
+    <meta name="author" content="Thomas Pericoi" />
+    <meta
+      name="description"
+      content="Philippe Marmotte est un des rares endroits encore fun de l'interweb. Abdel Super Zinzin, Gandalf Laser ou encore Didier Tam-Tam. Ils sont tous là !"
+    />
 
-  <!-- Content -->
-  <title>Philippe Marmotte - Générateur d'identité un peu marrant</title>
-  <meta name="author" content="Thomas Pericoi" />
-  <meta name="description"
-    content="Philippe Marmotte est un des rares endroits encore fun de l'interweb. Abdel Super Zinzin, Gandalf Laser ou encore Didier Tam-Tam. Ils sont tous là !" />
+    <!-- Open Graph Protocol -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Philippe Marmotte" />
+    <meta property="og:url" content="https://philippemarmotte.fr/" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta
+      property="og:description"
+      content="Philippe Marmotte est un des rares endroits encore fun de l'interweb. Abdel Super Zinzin, Gandalf Laser ou encore Didier Tam-Tam. Ils sont tous là !"
+    />
+    <meta
+      property="og:image"
+      content="https://philippemarmotte.fr/img/philippeMarmotte.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Open Graph Protocol -->
-  <meta property="og:type" content="website" />
-  <meta property="og:description"
-    content="Philippe Marmotte est un des rares endroits encore fun de l'interweb. Abdel Super Zinzin, Gandalf Laser ou encore Didier Tam-Tam. Ils sont tous là !" />
-  <meta property="og:image" content="https://philippemarmotte.fr/img/philippeMarmotte.jpg" />
+    <!-- Theme Chrome -->
+    <meta name="theme-color" content="#eeeeee" />
+  </head>
 
-  <!-- Theme Chrome -->
-  <meta name="theme-color" content="#eeeeee" />
+  <body>
+    <noscript>
+      <p class="noscript-message">
+        Philippe Marmotte nécessite JavaScript pour générer du texte.
+      </p>
+    </noscript>
 
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "GTM-N2TS27N");
-  </script>
-  <!-- End Google Tag Manager -->
-</head>
-
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2TS27N" height="0" width="0"
-      style="display: none; visibility: hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <div class="wrapper">
-    <div class="topbar">
-      <h1 class="sitename">Philippe Marmotte</h1>
-      <button id="darkmode" class="btn dashed" value="darkmode">
-        Darkmode
-      </button>
-    </div>
-
-    <div id="content">Philippe Marmotte</div>
-
-    <div class="container">
-      <div class="button-container">
-        <button id="btn-random" class="btn large" value="Refresh">
-          Générer une identité
-        </button>
-        <button id="btn-copy" class="btn large dashed" value="Copy">
-          Copier
+    <div class="wrapper">
+      <div class="topbar">
+        <h1 class="sitename">Philippe Marmotte</h1>
+        <button id="darkmode" class="btn dashed" value="darkmode">
+          Darkmode
         </button>
       </div>
 
-      <div class="settings">
-        <div class="radio">
-          <input type="radio" id="all" name="name-gender" value="all" checked />
-          <label for="all">Mixte</label>
+      <div id="content">Philippe Marmotte</div>
+
+      <div class="container">
+        <div class="button-container">
+          <button id="btn-random" class="btn large" value="Refresh">
+            Générer une identité
+          </button>
+          <button id="btn-copy" class="btn large dashed" value="Copy">
+            Copier
+          </button>
         </div>
 
-        <div class="radio">
-          <input type="radio" id="male" name="name-gender" value="M" />
-          <label for="male">Masculin</label>
-        </div>
+        <div class="settings">
+          <div class="radio">
+            <input
+              type="radio"
+              id="all"
+              name="name-gender"
+              value="all"
+              checked
+            />
+            <label for="all">Mixte</label>
+          </div>
 
-        <div class="radio">
-          <input type="radio" id="female" name="name-gender" value="F" />
-          <label for="female">Féminin</label>
-        </div>
+          <div class="radio">
+            <input type="radio" id="male" name="name-gender" value="M" />
+            <label for="male">Masculin</label>
+          </div>
 
-        <div class="checkbox">
-          <input type="checkbox" id="title" name="title" />
-          <label for="title">Utiliser un titre</label>
+          <div class="radio">
+            <input type="radio" id="female" name="name-gender" value="F" />
+            <label for="female">Féminin</label>
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox" id="title" name="title" />
+            <label for="title">Utiliser un titre</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span id="possibilities" class="possibilities"
+          >La machine est cassée ...</span
+        >
+
+        <div class="credits">
+          <span
+            ><a
+              href="https://thomaspericoi.com/"
+              target="_blank"
+              title="Le site de Thomas Pericoi"
+              alt="Allez sur thomaspericoi.com"
+              >Thomas Pericoi</a
+            ></span
+          >
+          <a
+            href="https://github.com/ThomasPericoi/PhilippeMarmotte"
+            target="_blank"
+            id="btn-github"
+            class="btn dashed"
+            title="Le repository associé au projet"
+            alt="GitHub"
+            >GitHub</a
+          >
         </div>
       </div>
     </div>
-
-    <div class="footer">
-      <span id="possibilities" class="possibilities">La machine est cassée ...</span>
-
-      <div class="credits">
-        <span><a href="https://thomaspericoi.com/" target="_blank" title="Le site de Thomas Pericoi"
-            alt="Allez sur thomaspericoi.com">Thomas Pericoi</a></span>
-        <a href="https://github.com/ThomasPericoi/PhilippeMarmotte" target="_blank" id="btn-github" class="btn dashed"
-          title="Le repository associé au projet" alt="GitHub">GitHub</a>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript" src="js/main.js"></script>
-</body>
-
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>

@@ -55,10 +55,7 @@ function printAsciiById(asciiId, options = {}) {
   }
 
   // Output
-  console.log(
-    `%c${ascii.art}`,
-    getAsciiStyle(ascii, options)
-  );
+  console.log(`%c${ascii.art}`, getAsciiStyle(ascii, options));
   printAsciiCredit(ascii, options);
 }
 
@@ -78,7 +75,7 @@ function printAsciiByName(asciiName, options = {}) {
 function printAsciiSearch(query, options = {}) {
   const normalizedQuery = query.toLowerCase();
   const selectedAscii = asciis.find((ascii) =>
-    ascii.name.toLowerCase().includes(normalizedQuery)
+    ascii.name.toLowerCase().includes(normalizedQuery),
   );
 
   if (!selectedAscii) {
@@ -97,7 +94,6 @@ function printRandomAscii(criteria = "all", options = {}) {
   // Output
   printAsciiByName(randomAscii.name, options);
 }
-
 
 /*____________________________________ ASCIIS LIBRAIRY ____________________________________*/
 
@@ -987,7 +983,7 @@ __|_________\______/
     `,
     color: "Red",
     height: 10,
-    author: "B.D.S.`\"Don\"McConnell",
+    author: 'B.D.S.`"Don"McConnell',
   },
   {
     type: "character",

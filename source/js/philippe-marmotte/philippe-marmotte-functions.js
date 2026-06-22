@@ -1,4 +1,4 @@
-/*____________________________________ USEFOOL FUNCTIONS ____________________________________*/
+/*____________________________________ UTILITY FUNCTIONS ____________________________________*/
 
 /* Functions about random */
 
@@ -35,7 +35,9 @@ function getRandomFloatBetween(min, max, decimals) {
 
   var randomNumber = Math.random() * (max - min) + min;
 
-  return decimals === undefined ? randomNumber : roundNumber(randomNumber, decimals);
+  return decimals === undefined
+    ? randomNumber
+    : roundNumber(randomNumber, decimals);
 }
 
 function getRandomIdFromArray(arrayName) {
@@ -196,7 +198,11 @@ function clampNumber(number, min, max) {
   min = Number(min);
   max = Number(max);
 
-  if (!Number.isFinite(number) || !Number.isFinite(min) || !Number.isFinite(max)) {
+  if (
+    !Number.isFinite(number) ||
+    !Number.isFinite(min) ||
+    !Number.isFinite(max)
+  ) {
     return NaN;
   }
 
@@ -371,13 +377,16 @@ async function copyToClipboard(value) {
 /* Functions about Google and searching */
 
 function searchOnGoogle(query) {
-  window.open("https://google.com/search?q=" + encodeURIComponent(query), "newTab");
+  window.open(
+    "https://google.com/search?q=" + encodeURIComponent(query),
+    "newTab",
+  );
 }
 
 function searchOnGoogleImage(query) {
   window.open(
     "https://google.com/search?q=" + encodeURIComponent(query) + "&tbm=isch",
-    "newTab"
+    "newTab",
   );
 }
 
@@ -410,7 +419,10 @@ function changeTitleOnBlur(string) {
 /* Functions about responsive */
 
 function isMobile() {
-  if (navigator.userAgentData && typeof navigator.userAgentData.mobile === "boolean") {
+  if (
+    navigator.userAgentData &&
+    typeof navigator.userAgentData.mobile === "boolean"
+  ) {
     return navigator.userAgentData.mobile;
   }
 
@@ -437,9 +449,12 @@ function debounce(callback, delay = 250) {
     var args = arguments;
 
     clearTimeout(timeoutId);
-    timeoutId = setTimeout(function () {
-      callback.apply(context, args);
-    }, Math.max(0, Number(delay) || 0));
+    timeoutId = setTimeout(
+      function () {
+        callback.apply(context, args);
+      },
+      Math.max(0, Number(delay) || 0),
+    );
   };
 }
 
@@ -458,14 +473,111 @@ function throttle(callback, delay = 250) {
     callback.apply(this, arguments);
     isWaiting = true;
 
-    setTimeout(function () {
-      isWaiting = false;
+    setTimeout(
+      function () {
+        isWaiting = false;
 
-      if (lastArgs) {
-        callback.apply(lastContext, lastArgs);
-        lastArgs = undefined;
-        lastContext = undefined;
-      }
-    }, Math.max(0, Number(delay) || 0));
+        if (lastArgs) {
+          callback.apply(lastContext, lastArgs);
+          lastArgs = undefined;
+          lastContext = undefined;
+        }
+      },
+      Math.max(0, Number(delay) || 0),
+    );
   };
+}
+
+/*__________________________________ PHILIPPE MARMOTTE FUNCTIONS ____________________________________*/
+
+function normalizeGender(gender) {
+  return gender === "F" || gender === "M" ? gender : "all";
+}
+
+function getRandomFirstName(gender = "all") {
+  // Var(s)
+  var rarity = "";
+  var prefix = "";
+  gender = normalizeGender(gender);
+  // Process - Rarity
+  if (probability(7)) {
+    rarity = "L";
+  } else if (probability(15)) {
+    rarity = "R";
+  } else if (probability(30)) {
+    rarity = "U";
+  } else {
+    rarity = "C";
+  }
+  // Process - First Name
+  var selectedFirstNames = firstNames.filter(function (name) {
+    return (
+      (gender === "all" || name.gender === gender) && name.rarity === rarity
+    );
+  }); // Select the names matching the gender and rarity
+  selectedFirstNames.length < 1 &&
+    (selectedFirstNames = firstNames.filter(function (name) {
+      return gender === "all" || name.gender === gender;
+    })); // If empty or nothing is matching, select the requested gender
+  var firstName = getRandomValueFromArray(selectedFirstNames);
+  // Process - Prefix
+  if (probability(7)) {
+    var selectedPrefixes = firstNamePrefixes.filter(
+      (name) => name.gender === firstName.gender,
+    ); // Select the prefixes matching the selected name gender
+    var prefix = getRandomValueFromArray(selectedPrefixes).value + "-";
+  }
+  // Output
+  return `${prefix}${firstName.value}`;
+}
+
+function getRandomLastName() {
+  // Var(s)
+  var prefix = "";
+  var lastName = "";
+  var secondName = "";
+  var suffix = "";
+  // Process
+  probability(10) && (prefix = getRandomValueFromArray(lastNamePrefixes));
+  probability(1)
+    ? (lastName = getRandomFirstName("M"))
+    : (lastName = getRandomValueFromArray(lastNames));
+  probability(7) && (secondName = "-" + getRandomValueFromArray(lastNames));
+  probability(10) && (suffix = getRandomValueFromArray(lastNameSuffixes));
+  // Output
+  return `${prefix}${lastName}${secondName}${suffix}`;
+}
+
+function getRandomTitle(gender = "all") {
+  // Process
+  gender = normalizeGender(gender);
+  var selectedTitles = titles.filter((name) => name.gender === gender); // Select the titles matching the gender
+  selectedTitles.length < 1 && (selectedTitles = Object.values(titles)); // If empty or nothing is matching, select them all
+  var title = getRandomValueFromArray(selectedTitles);
+  // Output
+  return `${title.value}`;
+}
+
+function getRandomIdentity(gender = "all", title = false) {
+  // Process
+  gender = normalizeGender(gender);
+  gender === "all" && (probability(50) ? (gender = "M") : (gender = "F")); // If no valid gender is asked, go for or male or female
+  // Output
+  return `${
+    title ? getRandomTitle(gender) : getRandomFirstName(gender)
+  } ${getRandomLastName()}`;
+}
+
+function getNamesPossibilities() {
+  var possibilities = 0;
+  // Process
+  possibilities =
+    firstNames.length *
+    lastNames.length ** 2 *
+    titles.length *
+    firstNamePrefixes.length *
+    lastNamePrefixes.length *
+    lastNameSuffixes.length;
+  // Output
+  return possibilities;
 }
