@@ -1,106 +1,238 @@
 /*____________________________________ GATHER EVERYTHING ____________________________________*/
 
-/* Darkmode */
+/* Philippe Marmotte Frontend */
 
-var btnDarkmode = document.getElementById("darkmode");
+var btnTheme = document.getElementById("btn-theme");
+var btnGenerate = document.getElementById("btn-generate");
+var btnCopy = document.getElementById("btn-copy");
+var btnGithub = document.getElementById("btn-github");
+var generatedIdentity = document.getElementById("generated-identity");
+var possibilities = document.getElementById("possibilities");
+var copyStatus = document.getElementById("copy-status");
+var titleInput = document.getElementById("title");
+var genders = document.getElementsByName("name-gender");
+var themeColor = document.querySelector("meta[name=theme-color]");
+var copyButtonLabel = btnCopy.innerText;
 var darkmode = false;
+var blobButtons = [btnTheme, btnGenerate, btnCopy, btnGithub];
+
+/* Helpers */
+
+function changeTitleOnBlur(string) {
+  var originalTitle = document.title;
+
+  window.addEventListener("focus", function () {
+    document.title = originalTitle;
+  });
+
+  window.addEventListener("blur", function () {
+    document.title = string;
+    setTimeout(function () {
+      document.title = originalTitle;
+    }, 2000);
+  });
+}
+
+function isMobile() {
+  if (
+    navigator.userAgentData &&
+    typeof navigator.userAgentData.mobile === "boolean"
+  ) {
+    return navigator.userAgentData.mobile;
+  }
+
+  if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) {
+    return true;
+  }
+
+  return /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent || "");
+}
 
 function isNightTime() {
   var currentHour = new Date().getHours();
-  var nightTime = false;
 
-  (currentHour >= 20 || currentHour <= 6) && (nightTime = true);
-  return nightTime;
+  return currentHour >= 20 || currentHour <= 6;
 }
 
-isNightTime() && (darkmode = true);
+function getCheckedGender() {
+  for (var i = 0; i < genders.length; i++) {
+    if (genders[i].checked) {
+      return genders[i].value;
+    }
+  }
 
-function applyDarkmode() {
-  if (darkmode) {
-    document.body.classList.add("darkmode");
-    btnDarkmode.innerHTML = "Allumer";
-    console.log("On éteint les lumières...");
-    document
-      .querySelector("meta[name=theme-color]")
-      .setAttribute("content", "#2b2b2b");
-  } else {
-    document.body.classList.remove("darkmode");
-    btnDarkmode.innerHTML = "Éteindre";
-    console.log("Et on allume les lumières !");
-    document
-      .querySelector("meta[name=theme-color]")
-      .setAttribute("content", "#eeeeee");
+  return "all";
+}
+
+function getRandomIntBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getRandomBlobRadius() {
+  var percentage1 = getRandomIntBetween(25, 75);
+  var percentage2 = getRandomIntBetween(25, 75);
+  var percentage3 = getRandomIntBetween(25, 75);
+  var percentage4 = getRandomIntBetween(25, 75);
+
+  return (
+    percentage1 +
+    "% " +
+    (100 - percentage1) +
+    "% " +
+    (100 - percentage2) +
+    "% " +
+    percentage2 +
+    "% / " +
+    percentage3 +
+    "% " +
+    percentage4 +
+    "% " +
+    (100 - percentage4) +
+    "% " +
+    (100 - percentage3) +
+    "%"
+  );
+}
+
+function transformToBlob(element) {
+  if (!element || !element.style) {
+    return;
+  }
+
+  element.style.borderRadius = getRandomBlobRadius();
+}
+
+function transformButtonsToBlob() {
+  blobButtons.forEach(transformToBlob);
+}
+
+function setCopyStatus(message) {
+  copyStatus.innerText = message;
+
+  setTimeout(function () {
+    copyStatus.innerText = "";
+  }, 1800);
+}
+
+async function copyGeneratedIdentity() {
+  if (!navigator.clipboard || !window.isSecureContext) {
+    return false;
+  }
+
+  try {
+    await navigator.clipboard.writeText(generatedIdentity.innerText);
+    return true;
+  } catch {
+    return false;
   }
 }
 
-btnDarkmode.addEventListener("click", () => {
+function setCopyFeedback() {
+  btnCopy.innerText = "Copié !";
+  btnCopy.setAttribute("aria-label", "Identité copiée");
+  setCopyStatus("L'identité générée a été copiée.");
+
+  setTimeout(function () {
+    btnCopy.innerText = copyButtonLabel;
+    btnCopy.setAttribute("aria-label", "Copier l'identité générée");
+  }, 1400);
+}
+
+/* Theme */
+
+function applyTheme() {
+  document.body.classList.toggle("darkmode", darkmode);
+  btnTheme.innerText = darkmode ? "Allumer" : "Éteindre";
+  btnTheme.setAttribute("aria-pressed", String(darkmode));
+
+  if (themeColor) {
+    themeColor.setAttribute("content", darkmode ? "#2b2b2b" : "#f9f9f9");
+  }
+}
+
+function toggleTheme() {
   darkmode = !darkmode;
-  applyDarkmode();
-  transformToBlob(btnDarkmode);
-});
+  applyTheme();
+  transformToBlob(btnTheme);
+}
 
-/* Philippe Marmotte Frontend */
+/* Process */
 
-var btnRandom = document.getElementById("btn-random");
-var btnCopy = document.getElementById("btn-copy");
-var content = document.getElementById("content");
-var possibilities = document.getElementById("possibilities");
-var title = document.getElementById("title");
-var genders = document.getElementsByName("name-gender");
-var btnGithub = document.getElementById("btn-github");
-
-function changeContent() {
+function generateIdentity() {
   document.body.classList.add("transition");
-  setTimeout(() => {
-    var checkedGender = "all";
 
-    for (var i = 0; i < genders.length; i++) {
-      if (genders[i].checked) {
-        checkedGender = genders[i].value;
-      }
-    }
-    content.textContent = getRandomIdentity(checkedGender, title.checked);
+  setTimeout(function () {
+    generatedIdentity.innerText = PhilippeMarmotte.generateIdentity(
+      getCheckedGender(),
+      titleInput.checked,
+    );
     document.body.classList.remove("transition");
   }, 250);
 }
 
-btnRandom.addEventListener("click", () => {
-  changeContent();
-  transformToBlob(btnRandom);
-});
+function renderPossibilities() {
+  possibilities.innerHTML =
+    "Actuellement <b>" +
+    PhilippeMarmotte.formatNumber(PhilippeMarmotte.getNamesPossibilities()) +
+    "</b> combinaisons possibles.";
+}
 
-document.addEventListener("keyup", function (event) {
-  if (event.keyCode === 13 || event.keyCode === 32) {
-    changeContent();
-    transformToBlob(btnRandom);
-  }
-});
+function bindEvents() {
+  btnTheme.addEventListener("click", toggleTheme);
+  btnGenerate.addEventListener("click", function () {
+    generateIdentity();
+    transformToBlob(btnGenerate);
+  });
+  btnGithub.addEventListener("click", function () {
+    transformToBlob(btnGithub);
+    btnGithub.blur();
+  });
 
-btnCopy.addEventListener("click", () => {
-  copyToClipboard(content.textContent);
-  transformToBlob(btnCopy);
-});
+  document.addEventListener("keydown", function (event) {
+    var activeElement = document.activeElement;
+    var isTyping =
+      activeElement &&
+      ["INPUT", "TEXTAREA", "SELECT", "BUTTON", "A"].includes(
+        activeElement.tagName,
+      );
 
-btnGithub.addEventListener("click", () => {
-  transformToBlob(btnGithub);
-});
+    if (isTyping) {
+      return;
+    }
 
-transformToBlob(btnDarkmode);
-transformToBlob(btnRandom);
-transformToBlob(btnCopy);
-transformToBlob(btnGithub);
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      generateIdentity();
+      transformToBlob(btnGenerate);
+    }
+  });
 
-/* Init */
+  btnCopy.addEventListener("click", function () {
+    transformToBlob(btnCopy);
+    copyGeneratedIdentity().then(function (copied) {
+      if (copied) {
+        setCopyFeedback();
+        return;
+      }
 
-document.addEventListener("DOMContentLoaded", function () {
+      setCopyStatus("La copie de l'identité a échoué.");
+    });
+  });
+}
+
+function init() {
+  darkmode = isNightTime();
+  applyTheme();
+  transformButtonsToBlob();
+  bindEvents();
+  renderPossibilities();
+  AsciiPrinter.printRandom();
+
   if (!isMobile()) {
     changeTitleOnBlur("On peut plus rien dire...");
   }
-  applyDarkmode();
-  printRandomAscii();
+}
 
-  possibilities.innerHTML =
-    "Actuellement <u>" +
-    beautifyNumber(getNamesPossibilities()) +
-    "</u> combinaisons possibles.";
-});
+/* Init */
+
+document.addEventListener("DOMContentLoaded", init);

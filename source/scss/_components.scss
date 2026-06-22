@@ -1,108 +1,119 @@
 /*____________________________________ COMPONENTS ____________________________________*/
-
-/* Buttons */
+@use "settings" as *;
 
 .btn {
-  box-sizing: border-box;
-  padding: 15px 20px;
+  min-width: 8rem;
+  padding: 0.9rem 1.2rem;
+  position: relative;
 
-  color: $ebony;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $color-text;
+  line-height: 1;
   text-align: center;
   text-decoration: none;
 
-  background: transparent;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $ebony;
+  background-color: transparent;
+  border: 2px solid currentColor;
+  border-radius: 50% 50% 53% 47% / 31% 58% 42% 69%;
 
-  transition: all ease $darkmode-transition;
-
-  &.dashed {
-    border-style: dashed;
-  }
-
-  &.large {
-    padding: 30px 35px;
-    font-size: 22px;
-  }
+  transition:
+    border-radius $transition-slow,
+    color $transition-medium,
+    background-color $transition-medium,
+    transform $transition-fast;
 
   .darkmode & {
-    color: $almost-white;
-    border-color: $almost-white;
+    color: $color-dark-text;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $color-background;
+
+    background-color: $color-text;
+    transform: translateY(-2px);
+
+    .darkmode & {
+      color: $color-dark-background;
+
+      background-color: $color-dark-text;
+    }
   }
 }
 
-/* Radio & checkbox */
+.btn-secondary {
+  border-style: dashed;
+}
 
-.radio,
-.checkbox {
-  padding: 0.8rem;
+.btn-large {
+  min-width: min(100%, 15rem);
+  padding: 1.35rem 1.55rem;
 
-  input[type="radio"],
-  input[type="checkbox"] {
+  font-size: 1.2rem;
+}
+
+.choice {
+  position: relative;
+
+  display: inline-flex;
+
+  input {
+    width: 1px;
+    height: 1px;
     position: absolute;
+
     opacity: 0;
+  }
 
-    + label {
-      cursor: pointer;
-      &:before {
-        content: "";
+  label {
+    min-height: 2.6rem;
+    padding: 0.55rem 0.7rem;
 
-        width: 1rem;
-        height: 1rem;
-        position: relative;
-        top: -0.05rem;
-        margin-right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: $space-sm;
 
-        display: inline-block;
-        vertical-align: top;
+    cursor: pointer;
+  }
 
-        text-align: center;
-        cursor: pointer;
+  label::before {
+    content: "";
 
-        border-width: 1px;
-        border-color: $ebony;
+    width: 1rem;
+    height: 1rem;
 
-        transition: all 200ms ease;
+    flex: 0 0 auto;
 
-        .darkmode & {
-          border-color: $almost-white;
-        }
-      }
-    }
+    border: 2px solid currentColor;
 
-    &:checked {
-      + label {
-        &:before {
-          background-color: $ebony;
+    transition:
+      background-color $transition-fast,
+      transform $transition-fast;
+  }
 
-          .darkmode & {
-            background-color: $almost-white;
-          }
-        }
-      }
+  input[type="radio"] + label::before {
+    border-radius: 50% 50% 53% 47% / 31% 58% 42% 69%;
+  }
+
+  input[type="checkbox"] + label::before {
+    border-style: dashed;
+    border-radius: 2px;
+  }
+
+  input:checked + label::before {
+    background-color: currentColor;
+    box-shadow: inset 0 0 0 3px $color-background;
+
+    .darkmode & {
+      box-shadow: inset 0 0 0 3px $color-dark-background;
     }
   }
-}
 
-.radio {
-  input[type="radio"] {
-    + label {
-      &:before {
-        border-radius: 50% 50% 53% 47% / 31% 58% 42% 69%;
-        border-style: solid;
-      }
-    }
-  }
-}
-
-.checkbox {
-  input[type="checkbox"] {
-    + label {
-      &:before {
-        border-radius: 10%;
-        border-style: dashed;
-      }
-    }
+  input:focus-visible + label {
+    outline: 3px solid $color-focus;
+    outline-offset: 3px;
   }
 }

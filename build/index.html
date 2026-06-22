@@ -5,7 +5,13 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rancho&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
@@ -20,7 +26,7 @@
     <meta name="author" content="Thomas Pericoi" />
     <meta
       name="description"
-      content="Philippe Marmotte est un des rares endroits encore fun de l'interweb. Abdel Super Zinzin, Gandalf Laser ou encore Didier Tam-Tam. Ils sont tous là !"
+      content="Philippe Marmotte est un générateur d'identités loufoques. Abdel Super Zinzin, Gandalf Laser ou encore Didier Tam-Tam. Ils sont tous là !"
     />
 
     <!-- Open Graph Protocol -->
@@ -30,7 +36,7 @@
     <meta property="og:locale" content="fr_FR" />
     <meta
       property="og:description"
-      content="Philippe Marmotte est un des rares endroits encore fun de l'interweb. Abdel Super Zinzin, Gandalf Laser ou encore Didier Tam-Tam. Ils sont tous là !"
+      content="Philippe Marmotte est un générateur d'identités loufoques. Abdel Super Zinzin, Gandalf Laser ou encore Didier Tam-Tam. Ils sont tous là !"
     />
     <meta
       property="og:image"
@@ -38,93 +44,124 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Theme Chrome -->
-    <meta name="theme-color" content="#eeeeee" />
+    <!-- Chrome Theme -->
+    <meta name="theme-color" content="#f9f9f9" />
   </head>
 
   <body>
     <noscript>
       <p class="noscript-message">
-        Philippe Marmotte nécessite JavaScript pour générer du texte.
+        Philippe Marmotte nécessite JavaScript pour générer une identité.
       </p>
     </noscript>
 
-    <div class="wrapper">
-      <div class="topbar">
+    <div class="page">
+      <header class="topbar">
         <h1 class="sitename">Philippe Marmotte</h1>
-        <button id="darkmode" class="btn dashed" value="darkmode">
-          Darkmode
+        <button
+          id="btn-theme"
+          class="btn btn-secondary"
+          type="button"
+          aria-pressed="false"
+        >
+          Éteindre
         </button>
-      </div>
+      </header>
 
-      <div id="content">Philippe Marmotte</div>
+      <main class="generator" aria-labelledby="generated-identity">
+        <p
+          id="generated-identity"
+          class="generated-identity"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          Philippe Marmotte
+        </p>
 
-      <div class="container">
-        <div class="button-container">
-          <button id="btn-random" class="btn large" value="Refresh">
+        <div class="actions">
+          <button id="btn-generate" class="btn btn-large" type="button">
             Générer une identité
           </button>
-          <button id="btn-copy" class="btn large dashed" value="Copy">
+          <button
+            id="btn-copy"
+            class="btn btn-large btn-secondary"
+            type="button"
+            aria-label="Copier l'identité générée"
+          >
             Copier
           </button>
+          <p
+            id="copy-status"
+            class="sr-only"
+            aria-live="polite"
+            aria-atomic="true"
+          ></p>
         </div>
 
-        <div class="settings">
-          <div class="radio">
+        <fieldset class="settings">
+          <legend class="sr-only">Options de génération</legend>
+
+          <div class="choice">
             <input
               type="radio"
-              id="all"
+              id="gender-all"
               name="name-gender"
               value="all"
               checked
             />
-            <label for="all">Mixte</label>
+            <label for="gender-all">Mixte</label>
           </div>
 
-          <div class="radio">
-            <input type="radio" id="male" name="name-gender" value="M" />
-            <label for="male">Masculin</label>
+          <div class="choice">
+            <input type="radio" id="gender-male" name="name-gender" value="M" />
+            <label for="gender-male">Masculin</label>
           </div>
 
-          <div class="radio">
-            <input type="radio" id="female" name="name-gender" value="F" />
-            <label for="female">Féminin</label>
+          <div class="choice">
+            <input
+              type="radio"
+              id="gender-female"
+              name="name-gender"
+              value="F"
+            />
+            <label for="gender-female">Féminin</label>
           </div>
 
-          <div class="checkbox">
+          <div class="choice">
             <input type="checkbox" id="title" name="title" />
             <label for="title">Utiliser un titre</label>
           </div>
-        </div>
-      </div>
+        </fieldset>
+      </main>
 
-      <div class="footer">
-        <span id="possibilities" class="possibilities"
-          >La machine est cassée ...</span
-        >
+      <footer class="footer">
+        <p id="possibilities" class="possibilities">
+          La machine est cassée ...
+        </p>
 
         <div class="credits">
-          <span
-            ><a
+          <span>
+            Créé par
+            <a
               href="https://thomaspericoi.com/"
               target="_blank"
-              title="Le site de Thomas Pericoi"
-              alt="Allez sur thomaspericoi.com"
+              rel="noopener noreferrer"
               >Thomas Pericoi</a
-            ></span
-          >
+            >
+          </span>
           <a
             href="https://github.com/ThomasPericoi/PhilippeMarmotte"
             target="_blank"
+            rel="noopener noreferrer"
             id="btn-github"
-            class="btn dashed"
-            title="Le repository associé au projet"
-            alt="GitHub"
+            class="btn btn-secondary"
+            aria-label="Voir le dépôt GitHub de Philippe Marmotte"
             >GitHub</a
           >
         </div>
-      </div>
+      </footer>
     </div>
-    <script type="text/javascript" src="js/main.js"></script>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

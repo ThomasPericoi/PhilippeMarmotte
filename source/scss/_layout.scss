@@ -1,0 +1,159 @@
+/*____________________________________ LAYOUT ____________________________________*/
+@use "settings" as *;
+
+body {
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      transparent 0 calc(35px - 1px),
+      rgba($color-text, 0.025) calc(35px - 1px) 35px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 calc(35px - 1px),
+      rgba($color-text, 0.025) calc(35px - 1px) 35px
+    );
+
+  &.darkmode {
+    background-image:
+      repeating-linear-gradient(
+        to right,
+        transparent 0 calc(35px - 1px),
+        rgba($color-dark-text, 0.035) calc(35px - 1px) 35px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0 calc(35px - 1px),
+        rgba($color-dark-text, 0.035) calc(35px - 1px) 35px
+      );
+  }
+}
+
+.noscript-message {
+  max-width: $content-max-width;
+  padding: $space-md;
+  margin: $space-md auto;
+
+  font-family: $font-ui;
+  text-align: center;
+
+  background-color: $color-background;
+  border: 2px solid $color-text;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: max($space-md, env(safe-area-inset-top))
+    max($space-md, env(safe-area-inset-right))
+    max($space-md, env(safe-area-inset-bottom))
+    max($space-md, env(safe-area-inset-left));
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: $space-xl;
+
+  animation: fadeIn ease-in 600ms;
+  animation-fill-mode: backwards;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    padding: $space-lg;
+  }
+}
+
+.topbar,
+.footer {
+  width: 100%;
+  max-width: $content-max-width;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-md;
+}
+
+.topbar {
+  justify-content: space-between;
+}
+
+.sitename {
+  margin: 0;
+
+  font-size: 1.2rem;
+}
+
+.generator {
+  width: 100%;
+  max-width: $content-max-width;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $space-xl;
+}
+
+.generated-identity {
+  max-width: 16ch;
+  margin: 0;
+
+  font-family: $font-display;
+  font-size: clamp(3.2rem, 14vw, 6.5rem);
+  line-height: 0.95;
+  text-align: center;
+  overflow-wrap: anywhere;
+
+  opacity: 1;
+
+  transition: opacity $transition-medium;
+
+  .transition & {
+    opacity: 0;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $space-sm;
+}
+
+.settings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: $space-xs $space-md;
+}
+
+.footer {
+  align-items: flex-end;
+  justify-content: space-between;
+
+  font-size: 0.95rem;
+}
+
+.possibilities {
+  max-width: 22rem;
+  margin: 0;
+
+  color: $color-muted;
+
+  .darkmode & {
+    color: rgba($color-dark-text, 0.78);
+  }
+}
+
+.credits {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: $space-sm;
+
+  text-align: right;
+}
