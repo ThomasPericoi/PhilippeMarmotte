@@ -108,9 +108,11 @@ function transformButtonsToBlob() {
 
 function setCopyStatus(message) {
   copyStatus.innerText = message;
+  copyStatus.classList.toggle("is-visible", Boolean(message));
 
   setTimeout(function () {
     copyStatus.innerText = "";
+    copyStatus.classList.remove("is-visible");
   }, 1800);
 }
 
@@ -226,7 +228,10 @@ function init() {
   transformButtonsToBlob();
   bindEvents();
   renderPossibilities();
-  AsciiPrinter.printRandom();
+
+  if (globalThis.AsciiPrinter) {
+    AsciiPrinter.printRandom();
+  }
 
   if (!isMobile()) {
     changeTitleOnBlur("On peut plus rien dire...");

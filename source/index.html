@@ -68,7 +68,11 @@
         </button>
       </header>
 
-      <main class="generator" aria-labelledby="generated-identity">
+      <main
+        class="generator"
+        aria-labelledby="generated-identity"
+        aria-describedby="possibilities"
+      >
         <p
           id="generated-identity"
           class="generated-identity"
@@ -78,60 +82,68 @@
           Philippe Marmotte
         </p>
 
-        <div class="actions">
-          <button id="btn-generate" class="btn btn-large" type="button">
-            Générer une identité
-          </button>
-          <button
-            id="btn-copy"
-            class="btn btn-large btn-secondary"
-            type="button"
-            aria-label="Copier l'identité générée"
-          >
-            Copier
-          </button>
+        <div class="controls">
+          <div class="actions">
+            <button id="btn-generate" class="btn btn-large" type="button">
+              Générer une identité
+            </button>
+            <button
+              id="btn-copy"
+              class="btn btn-large btn-secondary"
+              type="button"
+              aria-label="Copier l'identité générée"
+            >
+              Copier
+            </button>
+          </div>
+
+          <fieldset class="settings">
+            <legend class="sr-only">Options de génération</legend>
+
+            <div class="choice">
+              <input
+                type="radio"
+                id="gender-all"
+                name="name-gender"
+                value="all"
+                checked
+              />
+              <label for="gender-all">Mixte</label>
+            </div>
+
+            <div class="choice">
+              <input
+                type="radio"
+                id="gender-male"
+                name="name-gender"
+                value="M"
+              />
+              <label for="gender-male">Masculin</label>
+            </div>
+
+            <div class="choice">
+              <input
+                type="radio"
+                id="gender-female"
+                name="name-gender"
+                value="F"
+              />
+              <label for="gender-female">Féminin</label>
+            </div>
+
+            <div class="choice">
+              <input type="checkbox" id="title" name="title" />
+              <label for="title">Utiliser un titre</label>
+            </div>
+          </fieldset>
+
           <p
             id="copy-status"
-            class="sr-only"
+            class="copy-status"
             aria-live="polite"
             aria-atomic="true"
           ></p>
         </div>
-
-        <fieldset class="settings">
-          <legend class="sr-only">Options de génération</legend>
-
-          <div class="choice">
-            <input
-              type="radio"
-              id="gender-all"
-              name="name-gender"
-              value="all"
-              checked
-            />
-            <label for="gender-all">Mixte</label>
-          </div>
-
-          <div class="choice">
-            <input type="radio" id="gender-male" name="name-gender" value="M" />
-            <label for="gender-male">Masculin</label>
-          </div>
-
-          <div class="choice">
-            <input
-              type="radio"
-              id="gender-female"
-              name="name-gender"
-              value="F"
-            />
-            <label for="gender-female">Féminin</label>
-          </div>
-
-          <div class="choice">
-            <input type="checkbox" id="title" name="title" />
-            <label for="title">Utiliser un titre</label>
-          </div>
-        </fieldset>
       </main>
 
       <footer class="footer">

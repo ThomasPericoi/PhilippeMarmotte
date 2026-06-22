@@ -1,5 +1,5 @@
 (function (global) {
-  var PHILIPPE_MARMOTTE_VERSION = "1.0.0";
+  var PHILIPPE_MARMOTTE_VERSION = "1.0.1";
   var GENDERS = ["all", "M", "F"];
   var RARITIES = [
     { value: "L", weight: 7 },
@@ -137,7 +137,7 @@
       return "";
     }
 
-    if (getRandomIntBetween(1, 100) <= 7) {
+    if (getRandomIntBetween(1, 100) <= 10) {
       selectedPrefixes = firstNamePrefixes.filter(function (name) {
         return name.gender === firstName.gender;
       });
