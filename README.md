@@ -1,5 +1,3 @@
-![Logo de Philippe Marmotte](source/img/favicon.png)
-
 # Philippe Marmotte
 
 Philippe Marmotte est un générateur d'identités loufoques en JavaScript.
