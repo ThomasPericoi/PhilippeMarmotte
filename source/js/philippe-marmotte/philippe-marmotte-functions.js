@@ -1,5 +1,5 @@
 (function (global) {
-  var PHILIPPE_MARMOTTE_VERSION = "1.0.1";
+  var PHILIPPE_MARMOTTE_VERSION = "1.1.0";
   var GENDERS = ["all", "M", "F"];
   var RARITIES = [
     { value: "L", weight: 7 },
