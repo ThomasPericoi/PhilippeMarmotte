@@ -19,16 +19,6 @@
   font-variation-settings: "wdth" 100;
   font-weight: 700;
   text-decoration: none;
-
-  transition:
-    opacity $transition-fast,
-    transform $transition-fast;
-
-  &:hover,
-  &:focus-visible {
-    opacity: 0.8;
-    transform: translateY(-2px);
-  }
 }
 
 .signature-logo {
@@ -43,8 +33,6 @@
 .signature-logo-pupil {
   transform-box: fill-box;
   transform-origin: center;
-
-  transition: transform $transition-medium;
 
   .signature:hover &,
   .signature:focus-visible & {
