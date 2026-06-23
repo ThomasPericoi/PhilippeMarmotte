@@ -14,7 +14,7 @@ var genders = document.getElementsByName("name-gender");
 var themeColor = document.querySelector("meta[name=theme-color]");
 var copyButtonLabel = btnCopy.innerText;
 var darkmode = false;
-var blobButtons = [btnTheme, btnGenerate, btnCopy, btnGithub];
+var blobButtons = [btnTheme, btnGenerate, btnCopy];
 
 /* Helpers */
 
@@ -174,7 +174,7 @@ function generateIdentity() {
 
 function renderPossibilities() {
   possibilities.innerHTML =
-    "Actuellement <b>" +
+    "<b>" +
     PhilippeMarmotte.formatNumber(PhilippeMarmotte.getNamesPossibilities()) +
     "</b> combinaisons possibles.";
 }
@@ -186,7 +186,6 @@ function bindEvents() {
     transformToBlob(btnGenerate);
   });
   btnGithub.addEventListener("click", function () {
-    transformToBlob(btnGithub);
     btnGithub.blur();
   });
 

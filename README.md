@@ -279,8 +279,10 @@ source/
     _settings.scss
     _reset.scss
     _animations.scss
-    _components.scss
+    _ui.scss
     _layout.scss
+    _generator.scss
+    _footer.scss
     main.scss
 build/
 dist/

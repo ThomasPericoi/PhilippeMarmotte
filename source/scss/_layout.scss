@@ -98,104 +98,19 @@ body {
   gap: clamp($space-lg, 5vh, $space-xxl);
 }
 
-.generated-identity {
-  max-width: 13ch;
-  margin: 0;
-
-  font-family: $font-display;
-  font-size: clamp(3.6rem, 15vw, 7.4rem);
-  line-height: 0.95;
-  text-align: center;
-  overflow-wrap: anywhere;
-  text-wrap: balance;
-
-  opacity: 1;
-  text-shadow: 0 0.08em 0 rgba($color-text, 0.08);
-
-  transition:
-    opacity $transition-medium,
-    transform $transition-medium;
-
-  .transition & {
-    opacity: 0;
-    transform: translateY(0.25rem) rotate(-1deg);
-  }
-
-  .darkmode & {
-    text-shadow: 0 0.08em 0 rgba(#000, 0.28);
-  }
-}
-
-.controls {
-  width: min(100%, $control-max-width);
-
-  display: grid;
-  gap: $space-md;
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: $space-sm;
-}
-
-.settings {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: $space-xs $space-sm;
-}
-
-.copy-status {
-  min-height: 1.5rem;
-  margin: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: $font-primary;
-  font-size: 1.1rem;
-  color: inherit;
-  text-align: center;
-
-  opacity: 0;
-  pointer-events: none;
-
-  &.is-visible {
-    opacity: 1;
-
-    animation: fadeIn $transition-medium;
-  }
-}
-
 .footer {
-  align-items: flex-end;
-  justify-content: space-between;
-
-  font-size: 0.95rem;
-}
-
-.possibilities {
-  max-width: 22rem;
-  margin: 0;
-
-  color: inherit;
-}
-
-.credits {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
-  justify-content: flex-end;
-  gap: $space-sm;
 
-  text-align: right;
+  .icon-link {
+    justify-self: end;
+  }
 
-  a:not(.btn) {
-    text-decoration-thickness: 0.12em;
-    text-underline-offset: 0.18em;
+  @media screen and (max-width: $breakpoint-small) {
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
   }
 }
