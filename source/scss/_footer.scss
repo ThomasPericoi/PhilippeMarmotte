@@ -14,20 +14,30 @@
   gap: $space-xxs;
 
   font-family: $font-signature;
+  font-size: 0.75rem;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "wdth" 100;
   font-weight: 700;
   text-decoration: none;
+
+  @media screen and (min-width: $breakpoint-small) {
+    font-size: 1rem;
+  }
 }
 
 .signature-logo {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
 
   flex: 0 0 auto;
 
   overflow: visible;
+
+  @media screen and (min-width: $breakpoint-small) {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .signature-logo-pupil {
