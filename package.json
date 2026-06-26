@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/ThomasPericoi/PhilippeMarmotte/issues"
   },
-  "homepage": "https://philippemarmotte.fr/",
+  "homepage": "https://philippemarmotte.thomaspericoi.com/",
   "devDependencies": {
     "gulp": "^5.0.1",
     "gulp-clean-css": "^4.3.0",
