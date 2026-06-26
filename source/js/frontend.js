@@ -229,7 +229,7 @@ function init() {
   renderPossibilities();
 
   if (globalThis.AsciiPrinter) {
-    AsciiPrinter.printRandom();
+    AsciiPrinter.printRandom("character");
   }
 
   if (!isMobile()) {

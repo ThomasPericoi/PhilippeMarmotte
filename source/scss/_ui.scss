@@ -133,14 +133,14 @@
     gap: $space-sm;
 
     color: $color-muted;
-    
+
     border-radius: 999px;
-    
+
     transition:
       color $transition-fast,
       background-color $transition-fast;
-    
-        cursor: pointer;
+
+    cursor: pointer;
 
     .darkmode & {
       color: $color-dark-muted;
