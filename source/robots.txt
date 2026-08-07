@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://philippemarmotte.thomaspericoi.com/sitemap.xml
+Sitemap: https://philippe-marmotte.thomaspericoi.com/sitemap.xml

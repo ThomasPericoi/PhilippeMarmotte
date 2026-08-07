@@ -11,7 +11,7 @@ petite API JavaScript documentée, un build Gulp moderne et peu de dépendances.
 
 ## Démo
 
-<https://philippemarmotte.thomaspericoi.com>
+<https://philippe-marmotte.thomaspericoi.com>
 
 ## Fonctionnalités
 
