@@ -13,6 +13,7 @@ var titleInput = document.getElementById("title");
 var genders = document.getElementsByName("name-gender");
 var themeColor = document.querySelector("meta[name=theme-color]");
 var copyButtonLabel = btnCopy.innerText;
+var themeStorageKey = "philippe-marmotte-theme";
 var darkmode = false;
 var blobButtons = [btnTheme, btnGenerate, btnCopy];
 
@@ -52,6 +53,22 @@ function isNightTime() {
   var currentHour = new Date().getHours();
 
   return currentHour >= 20 || currentHour <= 6;
+}
+
+function getStoredTheme() {
+  try {
+    return localStorage.getItem(themeStorageKey);
+  } catch {
+    return null;
+  }
+}
+
+function storeTheme() {
+  try {
+    localStorage.setItem(themeStorageKey, darkmode ? "dark" : "light");
+  } catch {
+    // Keep theme switching functional when storage is unavailable.
+  }
 }
 
 function getCheckedGender() {
@@ -154,6 +171,7 @@ function applyTheme() {
 
 function toggleTheme() {
   darkmode = !darkmode;
+  storeTheme();
   applyTheme();
   transformToBlob(btnTheme);
 }
@@ -222,7 +240,9 @@ function bindEvents() {
 }
 
 function init() {
-  darkmode = isNightTime();
+  var storedTheme = getStoredTheme();
+
+  darkmode = storedTheme ? storedTheme === "dark" : isNightTime();
   applyTheme();
   transformButtonsToBlob();
   bindEvents();
