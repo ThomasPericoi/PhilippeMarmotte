@@ -2,6 +2,11 @@
 
 var firstNames = [
   {
+    value: "Aarav",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Aaron",
     gender: "M",
     rarity: "U",
@@ -72,12 +77,27 @@ var firstNames = [
     rarity: "C",
   },
   {
+    value: "Adélie",
+    gender: "F",
+    rarity: "U",
+  },
+  {
     value: "Adil",
     gender: "M",
     rarity: "U",
   },
   {
+    value: "Aditi",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Adolf",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Adonis",
     gender: "M",
     rarity: "L",
   },
@@ -102,9 +122,19 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Agathe",
+    gender: "F",
+    rarity: "C",
+  },
+  {
     value: "Agniès",
     gender: "F",
     rarity: "U",
+  },
+  {
+    value: "Ai",
+    gender: "F",
+    rarity: "R",
   },
   {
     value: "Aïcha",
@@ -117,8 +147,23 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Aiko",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Aimé",
     gender: "M",
+    rarity: "R",
+  },
+  {
+    value: "Aitana",
+    gender: "F",
+    rarity: "R",
+  },
+  {
+    value: "Akari",
+    gender: "F",
     rarity: "R",
   },
   {
@@ -162,6 +207,11 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Albator",
+    gender: "M",
+    rarity: "L",
+  },
+  {
     value: "Albert",
     gender: "M",
     rarity: "C",
@@ -180,6 +230,16 @@ var firstNames = [
     value: "Alejandro",
     gender: "M",
     rarity: "R",
+  },
+  {
+    value: "Alessia",
+    gender: "F",
+    rarity: "U",
+  },
+  {
+    value: "Alessio",
+    gender: "M",
+    rarity: "U",
   },
   {
     value: "Alex",
@@ -267,6 +327,11 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Alonso",
+    gender: "M",
+    rarity: "U",
+  },
+  {
     value: "Alonzo",
     gender: "M",
     rarity: "U",
@@ -275,6 +340,11 @@ var firstNames = [
     value: "Alou",
     gender: "M",
     rarity: "R",
+  },
+  {
+    value: "Aloy",
+    gender: "F",
+    rarity: "L",
   },
   {
     value: "Alpha",
@@ -292,9 +362,19 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Álvaro",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Alvin",
     gender: "M",
     rarity: "C",
+  },
+  {
+    value: "Alya",
+    gender: "F",
+    rarity: "U",
   },
   {
     value: "Amadeus",
@@ -324,6 +404,11 @@ var firstNames = [
   {
     value: "Amaury",
     gender: "M",
+    rarity: "U",
+  },
+  {
+    value: "Amaya",
+    gender: "F",
     rarity: "U",
   },
   {
@@ -357,14 +442,29 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Amir",
+    gender: "M",
+    rarity: "U",
+  },
+  {
     value: "Amy",
     gender: "F",
     rarity: "U",
   },
   {
+    value: "Anahita",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Anakin",
     gender: "M",
     rarity: "L",
+  },
+  {
+    value: "Ananya",
+    gender: "F",
+    rarity: "R",
   },
   {
     value: "Anastasia",
@@ -433,6 +533,11 @@ var firstNames = [
   },
   {
     value: "Anil",
+    gender: "M",
+    rarity: "U",
+  },
+  {
+    value: "Anis",
     gender: "M",
     rarity: "U",
   },
@@ -537,6 +642,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Arash",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Archibald",
     gender: "M",
     rarity: "R",
@@ -560,6 +670,11 @@ var firstNames = [
     value: "Aristote",
     gender: "M",
     rarity: "L",
+  },
+  {
+    value: "Arjun",
+    gender: "M",
+    rarity: "R",
   },
   {
     value: "Armand",
@@ -595,6 +710,16 @@ var firstNames = [
     value: "Artus",
     gender: "M",
     rarity: "U",
+  },
+  {
+    value: "Arwen",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Arya",
+    gender: "F",
+    rarity: "L",
   },
   {
     value: "Ashitaka",
@@ -997,6 +1122,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Bo",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Bob",
     gender: "M",
     rarity: "C",
@@ -1023,6 +1153,11 @@ var firstNames = [
   },
   {
     value: "Bouddha",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Bowser",
     gender: "M",
     rarity: "L",
   },
@@ -1097,6 +1232,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Buffy",
+    gender: "F",
+    rarity: "L",
+  },
+  {
     value: "Bulma",
     gender: "F",
     rarity: "L",
@@ -1140,6 +1280,11 @@ var firstNames = [
     value: "Camille",
     gender: "M",
     rarity: "U",
+  },
+  {
+    value: "Candela",
+    gender: "F",
+    rarity: "R",
   },
   {
     value: "Candyce",
@@ -1307,6 +1452,11 @@ var firstNames = [
     rarity: "C",
   },
   {
+    value: "Chen",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Chewbacca",
     gender: "M",
     rarity: "L",
@@ -1315,6 +1465,11 @@ var firstNames = [
     value: "Cheyenne",
     gender: "F",
     rarity: "L",
+  },
+  {
+    value: "Chiara",
+    gender: "F",
+    rarity: "U",
   },
   {
     value: "Chihiro",
@@ -1507,6 +1662,11 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Cloud",
+    gender: "M",
+    rarity: "L",
+  },
+  {
     value: "Clovis",
     gender: "M",
     rarity: "R",
@@ -1642,6 +1802,11 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Cyrano",
+    gender: "M",
+    rarity: "L",
+  },
+  {
     value: "Cyrielle",
     gender: "F",
     rarity: "R",
@@ -1672,6 +1837,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Daichi",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Daisy",
     gender: "F",
     rarity: "U",
@@ -1697,13 +1867,33 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Dante",
+    gender: "M",
+    rarity: "L",
+  },
+  {
     value: "Daphnée",
     gender: "F",
     rarity: "U",
   },
   {
+    value: "Daria",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Darius",
+    gender: "M",
+    rarity: "U",
+  },
+  {
     value: "Darren",
     gender: "M",
+    rarity: "R",
+  },
+  {
+    value: "Darya",
+    gender: "F",
     rarity: "R",
   },
   {
@@ -1735,6 +1925,11 @@ var firstNames = [
     value: "Deborah",
     gender: "F",
     rarity: "U",
+  },
+  {
+    value: "Deckard",
+    gender: "M",
+    rarity: "L",
   },
   {
     value: "Delilah",
@@ -1783,6 +1978,11 @@ var firstNames = [
   },
   {
     value: "Desmond",
+    gender: "M",
+    rarity: "R",
+  },
+  {
+    value: "Dexter",
     gender: "M",
     rarity: "R",
   },
@@ -1977,6 +2177,16 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Éléna",
+    gender: "F",
+    rarity: "U",
+  },
+  {
+    value: "Eleven",
+    gender: "F",
+    rarity: "L",
+  },
+  {
     value: "Eli",
     gender: "M",
     rarity: "U",
@@ -1993,6 +2203,11 @@ var firstNames = [
   },
   {
     value: "Elio",
+    gender: "M",
+    rarity: "U",
+  },
+  {
+    value: "Eliott",
     gender: "M",
     rarity: "U",
   },
@@ -2102,6 +2317,11 @@ var firstNames = [
     rarity: "C",
   },
   {
+    value: "Eowyn",
+    gender: "F",
+    rarity: "L",
+  },
+  {
     value: "Eredin",
     gender: "M",
     rarity: "L",
@@ -2197,6 +2417,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Ezra",
+    gender: "M",
+    rarity: "U",
+  },
+  {
     value: "Fabien",
     gender: "M",
     rarity: "C",
@@ -2222,14 +2447,29 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Fang",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Fanny",
     gender: "F",
     rarity: "C",
   },
   {
+    value: "Farah",
+    gender: "F",
+    rarity: "U",
+  },
+  {
     value: "Farid",
     gender: "M",
     rarity: "U",
+  },
+  {
+    value: "Faris",
+    gender: "M",
+    rarity: "R",
   },
   {
     value: "Fatima",
@@ -2300,6 +2540,11 @@ var firstNames = [
     value: "Flavien",
     gender: "M",
     rarity: "R",
+  },
+  {
+    value: "Fleabag",
+    gender: "F",
+    rarity: "L",
   },
   {
     value: "Fleur",
@@ -2487,6 +2732,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Ganondorf",
+    gender: "M",
+    rarity: "L",
+  },
+  {
     value: "Garance",
     gender: "F",
     rarity: "R",
@@ -2587,6 +2837,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Giacomo",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Gilbert",
     gender: "M",
     rarity: "U",
@@ -2612,8 +2867,18 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Ginevra",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Gino",
     gender: "M",
+    rarity: "R",
+  },
+  {
+    value: "Giorgia",
+    gender: "F",
     rarity: "R",
   },
   {
@@ -2842,6 +3107,11 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Hana",
+    gender: "F",
+    rarity: "U",
+  },
+  {
     value: "Hannibal",
     gender: "M",
     rarity: "L",
@@ -2875,6 +3145,11 @@ var firstNames = [
     value: "Harry",
     gender: "M",
     rarity: "C",
+  },
+  {
+    value: "Haruka",
+    gender: "F",
+    rarity: "R",
   },
   {
     value: "Harvey",
@@ -2957,7 +3232,17 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Hiroshi",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Hjalmar",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Hodor",
     gender: "M",
     rarity: "L",
   },
@@ -3042,6 +3327,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Idris",
+    gender: "M",
+    rarity: "U",
+  },
+  {
     value: "Ignace",
     gender: "M",
     rarity: "L",
@@ -3057,6 +3347,11 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Iker",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Ilona",
     gender: "F",
     rarity: "U",
@@ -3068,6 +3363,11 @@ var firstNames = [
   },
   {
     value: "Inaya",
+    gender: "F",
+    rarity: "U",
+  },
+  {
+    value: "Inés",
     gender: "F",
     rarity: "U",
   },
@@ -3110,6 +3410,16 @@ var firstNames = [
     value: "Isaure",
     gender: "F",
     rarity: "L",
+  },
+  {
+    value: "Isha",
+    gender: "F",
+    rarity: "R",
+  },
+  {
+    value: "Ishaan",
+    gender: "M",
+    rarity: "R",
   },
   {
     value: "Isham",
@@ -3317,14 +3627,34 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Jian",
+    gender: "M",
+    rarity: "R",
+  },
+  {
+    value: "Jill",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Jim",
     gender: "M",
     rarity: "C",
   },
   {
+    value: "Jimena",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Jimmy",
     gender: "M",
     rarity: "C",
+  },
+  {
+    value: "Jing",
+    gender: "F",
+    rarity: "R",
   },
   {
     value: "Joe",
@@ -3492,6 +3822,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Kabir",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Kad",
     gender: "M",
     rarity: "U",
@@ -3500,6 +3835,11 @@ var firstNames = [
     value: "Kader",
     gender: "M",
     rarity: "U",
+  },
+  {
+    value: "Kaito",
+    gender: "M",
+    rarity: "R",
   },
   {
     value: "Kaori",
@@ -3532,6 +3872,11 @@ var firstNames = [
     rarity: "C",
   },
   {
+    value: "Katniss",
+    gender: "F",
+    rarity: "L",
+  },
+  {
     value: "Kees",
     gender: "M",
     rarity: "R",
@@ -3552,6 +3897,11 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Kenji",
+    gender: "M",
+    rarity: "U",
+  },
+  {
     value: "Kent",
     gender: "M",
     rarity: "U",
@@ -3565,6 +3915,11 @@ var firstNames = [
     value: "Khaled",
     gender: "M",
     rarity: "U",
+  },
+  {
+    value: "Kian",
+    gender: "M",
+    rarity: "R",
   },
   {
     value: "Kid",
@@ -3585,6 +3940,11 @@ var firstNames = [
     value: "Kim",
     gender: "F",
     rarity: "C",
+  },
+  {
+    value: "Kirby",
+    gender: "M",
+    rarity: "L",
   },
   {
     value: "Kirikou",
@@ -3635,6 +3995,16 @@ var firstNames = [
     value: "Kylie",
     gender: "F",
     rarity: "C",
+  },
+  {
+    value: "Laia",
+    gender: "F",
+    rarity: "R",
+  },
+  {
+    value: "Lakshmi",
+    gender: "F",
+    rarity: "R",
   },
   {
     value: "Lambert",
@@ -3697,6 +4067,11 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Léana",
+    gender: "F",
+    rarity: "U",
+  },
+  {
     value: "Léandre",
     gender: "M",
     rarity: "R",
@@ -3704,6 +4079,11 @@ var firstNames = [
   {
     value: "Legolas",
     gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Leia",
+    gender: "F",
     rarity: "L",
   },
   {
@@ -3718,6 +4098,11 @@ var firstNames = [
   },
   {
     value: "Léo",
+    gender: "M",
+    rarity: "C",
+  },
+  {
+    value: "Léon",
     gender: "M",
     rarity: "C",
   },
@@ -3767,6 +4152,11 @@ var firstNames = [
     rarity: "C",
   },
   {
+    value: "Lian",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Lili-Rose",
     gender: "F",
     rarity: "R",
@@ -3785,6 +4175,16 @@ var firstNames = [
     value: "Lilo",
     gender: "M",
     rarity: "R",
+  },
+  {
+    value: "Lina",
+    gender: "F",
+    rarity: "C",
+  },
+  {
+    value: "Link",
+    gender: "M",
+    rarity: "L",
   },
   {
     value: "Linus",
@@ -3832,6 +4232,11 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Livia",
+    gender: "F",
+    rarity: "U",
+  },
+  {
     value: "Loan",
     gender: "M",
     rarity: "R",
@@ -3862,9 +4267,24 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Lorenzo",
+    gender: "M",
+    rarity: "U",
+  },
+  {
     value: "Lothar",
     gender: "M",
     rarity: "R",
+  },
+  {
+    value: "Lou",
+    gender: "F",
+    rarity: "C",
+  },
+  {
+    value: "Loubna",
+    gender: "F",
+    rarity: "U",
   },
   {
     value: "Louis",
@@ -3947,6 +4367,16 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Luffy",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Luigi",
+    gender: "M",
+    rarity: "L",
+  },
+  {
     value: "Luis",
     gender: "M",
     rarity: "U",
@@ -3960,6 +4390,11 @@ var firstNames = [
     value: "Luna",
     gender: "F",
     rarity: "R",
+  },
+  {
+    value: "Lya",
+    gender: "F",
+    rarity: "U",
   },
   {
     value: "Lysandre",
@@ -4202,6 +4637,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Mateo",
+    gender: "M",
+    rarity: "U",
+  },
+  {
     value: "Mathéo",
     gender: "M",
     rarity: "C",
@@ -4227,9 +4667,19 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Matteo",
+    gender: "M",
+    rarity: "U",
+  },
+  {
     value: "Maurice",
     gender: "M",
     rarity: "U",
+  },
+  {
+    value: "Maverick",
+    gender: "M",
+    rarity: "L",
   },
   {
     value: "Max",
@@ -4307,6 +4757,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Mélina",
+    gender: "F",
+    rarity: "U",
+  },
+  {
     value: "Mélodie",
     gender: "F",
     rarity: "R",
@@ -4315,6 +4770,11 @@ var firstNames = [
     value: "Mercedes",
     gender: "F",
     rarity: "R",
+  },
+  {
+    value: "Mercredi",
+    gender: "F",
+    rarity: "L",
   },
   {
     value: "Mercutio",
@@ -4327,9 +4787,19 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Merlin",
+    gender: "M",
+    rarity: "L",
+  },
+  {
     value: "Mérovée",
     gender: "M",
     rarity: "L",
+  },
+  {
+    value: "Meryem",
+    gender: "F",
+    rarity: "U",
   },
   {
     value: "Meryl",
@@ -4407,12 +4877,17 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Misaki",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Miyamoto",
     gender: "M",
     rarity: "L",
   },
   {
-    value: "Mohammed",
+    value: "Mohamed",
     gender: "M",
     rarity: "C",
   },
@@ -4440,6 +4915,11 @@ var firstNames = [
     value: "Monique",
     gender: "F",
     rarity: "C",
+  },
+  {
+    value: "Morpheus",
+    gender: "M",
+    rarity: "L",
   },
   {
     value: "Morris",
@@ -4487,6 +4967,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Mulder",
+    gender: "M",
+    rarity: "L",
+  },
+  {
     value: "Murphy",
     gender: "M",
     rarity: "U",
@@ -4517,6 +5002,16 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Naël",
+    gender: "M",
+    rarity: "U",
+  },
+  {
+    value: "Naëlle",
+    gender: "F",
+    rarity: "U",
+  },
+  {
     value: "Naïa",
     gender: "F",
     rarity: "R",
@@ -4542,6 +5037,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Nassim",
+    gender: "M",
+    rarity: "U",
+  },
+  {
     value: "Natalya",
     gender: "F",
     rarity: "R",
@@ -4562,8 +5062,38 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Nausicaä",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Navid",
+    gender: "M",
+    rarity: "R",
+  },
+  {
+    value: "Nawal",
+    gender: "F",
+    rarity: "U",
+  },
+  {
+    value: "Naya",
+    gender: "F",
+    rarity: "U",
+  },
+  {
+    value: "Nazanin",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Ned",
     gender: "M",
+    rarity: "U",
+  },
+  {
+    value: "Nélia",
+    gender: "F",
     rarity: "U",
   },
   {
@@ -4575,6 +5105,11 @@ var firstNames = [
     value: "Neo",
     gender: "M",
     rarity: "U",
+  },
+  {
+    value: "Néo",
+    gender: "M",
+    rarity: "R",
   },
   {
     value: "Néron",
@@ -4650,6 +5185,11 @@ var firstNames = [
     value: "Noam",
     gender: "M",
     rarity: "U",
+  },
+  {
+    value: "Noé",
+    gender: "M",
+    rarity: "C",
   },
   {
     value: "Noël",
@@ -4765,6 +5305,11 @@ var firstNames = [
     value: "Ondine",
     gender: "F",
     rarity: "L",
+  },
+  {
+    value: "Ophélie",
+    gender: "F",
+    rarity: "U",
   },
   {
     value: "Oprah",
@@ -4915,6 +5460,11 @@ var firstNames = [
     value: "Pavel",
     gender: "M",
     rarity: "R",
+  },
+  {
+    value: "Peach",
+    gender: "F",
+    rarity: "L",
   },
   {
     value: "Peggy",
@@ -5087,6 +5637,11 @@ var firstNames = [
     rarity: "L",
   },
   {
+    value: "Priya",
+    gender: "F",
+    rarity: "U",
+  },
+  {
     value: "Proximo",
     gender: "M",
     rarity: "L",
@@ -5147,6 +5702,11 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Rambo",
+    gender: "M",
+    rarity: "L",
+  },
+  {
     value: "Ramon",
     gender: "M",
     rarity: "R",
@@ -5170,6 +5730,16 @@ var firstNames = [
     value: "Raphaël",
     gender: "M",
     rarity: "C",
+  },
+  {
+    value: "Rayan",
+    gender: "M",
+    rarity: "C",
+  },
+  {
+    value: "Rayman",
+    gender: "M",
+    rarity: "L",
   },
   {
     value: "Raymond",
@@ -5222,6 +5792,11 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Ren",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Renand",
     gender: "M",
     rarity: "R",
@@ -5230,6 +5805,11 @@ var firstNames = [
     value: "Renaud",
     gender: "M",
     rarity: "U",
+  },
+  {
+    value: "Reza",
+    gender: "M",
+    rarity: "R",
   },
   {
     value: "Rhonda",
@@ -5275,6 +5855,11 @@ var firstNames = [
     value: "Ringo",
     gender: "M",
     rarity: "R",
+  },
+  {
+    value: "Ripley",
+    gender: "F",
+    rarity: "L",
   },
   {
     value: "Robb",
@@ -5350,6 +5935,11 @@ var firstNames = [
     value: "Roger",
     gender: "M",
     rarity: "C",
+  },
+  {
+    value: "Rohan",
+    gender: "M",
+    rarity: "U",
   },
   {
     value: "Roland",
@@ -5437,6 +6027,11 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Roxana",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Roxanne",
     gender: "F",
     rarity: "U",
@@ -5502,6 +6097,11 @@ var firstNames = [
     rarity: "C",
   },
   {
+    value: "Saitama",
+    gender: "M",
+    rarity: "L",
+  },
+  {
     value: "Salim",
     gender: "M",
     rarity: "U",
@@ -5537,6 +6137,11 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Samus",
+    gender: "F",
+    rarity: "L",
+  },
+  {
     value: "Sandra",
     gender: "F",
     rarity: "C",
@@ -5555,6 +6160,11 @@ var firstNames = [
     value: "Sansa",
     gender: "F",
     rarity: "R",
+  },
+  {
+    value: "Santiago",
+    gender: "M",
+    rarity: "U",
   },
   {
     value: "Saphira",
@@ -5612,9 +6222,19 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Scooby",
+    gender: "M",
+    rarity: "L",
+  },
+  {
     value: "Scott",
     gender: "M",
     rarity: "C",
+  },
+  {
+    value: "Scully",
+    gender: "F",
+    rarity: "L",
   },
   {
     value: "Seamus",
@@ -5650,6 +6270,11 @@ var firstNames = [
     value: "Selma",
     gender: "F",
     rarity: "R",
+  },
+  {
+    value: "Sephiroth",
+    gender: "M",
+    rarity: "L",
   },
   {
     value: "Septimus",
@@ -5722,6 +6347,16 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Shéhérazade",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Sheldon",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Shelly",
     gender: "F",
     rarity: "R",
@@ -5733,6 +6368,11 @@ var firstNames = [
   },
   {
     value: "Sherley",
+    gender: "F",
+    rarity: "R",
+  },
+  {
+    value: "Shirin",
     gender: "F",
     rarity: "R",
   },
@@ -5850,6 +6490,11 @@ var firstNames = [
     value: "Soline",
     gender: "F",
     rarity: "R",
+  },
+  {
+    value: "Sonic",
+    gender: "M",
+    rarity: "L",
   },
   {
     value: "Sophie",
@@ -6002,6 +6647,11 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Tao",
+    gender: "M",
+    rarity: "U",
+  },
+  {
     value: "Tarik",
     gender: "M",
     rarity: "U",
@@ -6132,6 +6782,11 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Tifa",
+    gender: "F",
+    rarity: "L",
+  },
+  {
     value: "Tiger",
     gender: "M",
     rarity: "R",
@@ -6237,6 +6892,11 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Trinity",
+    gender: "F",
+    rarity: "L",
+  },
+  {
     value: "Triss",
     gender: "F",
     rarity: "L",
@@ -6258,6 +6918,11 @@ var firstNames = [
   },
   {
     value: "Tybalt",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Tyrion",
     gender: "M",
     rarity: "L",
   },
@@ -6387,6 +7052,11 @@ var firstNames = [
     rarity: "R",
   },
   {
+    value: "Vikram",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Vincent",
     gender: "M",
     rarity: "C",
@@ -6410,6 +7080,11 @@ var firstNames = [
     value: "Violette",
     gender: "F",
     rarity: "U",
+  },
+  {
+    value: "Vittoria",
+    gender: "F",
+    rarity: "R",
   },
   {
     value: "Vivianne",
@@ -6483,6 +7158,11 @@ var firstNames = [
   },
   {
     value: "Wayne",
+    gender: "M",
+    rarity: "R",
+  },
+  {
+    value: "Wei",
     gender: "M",
     rarity: "R",
   },
@@ -6562,9 +7242,19 @@ var firstNames = [
     rarity: "C",
   },
   {
+    value: "Xena",
+    gender: "F",
+    rarity: "L",
+  },
+  {
     value: "Xenia",
     gender: "F",
     rarity: "L",
+  },
+  {
+    value: "Xia",
+    gender: "F",
+    rarity: "R",
   },
   {
     value: "Yann",
@@ -6677,13 +7367,28 @@ var firstNames = [
     rarity: "U",
   },
   {
+    value: "Zahra",
+    gender: "F",
+    rarity: "R",
+  },
+  {
     value: "Zangief",
     gender: "M",
     rarity: "L",
   },
   {
+    value: "Zayd",
+    gender: "M",
+    rarity: "R",
+  },
+  {
     value: "Zayne",
     gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Zelda",
+    gender: "F",
     rarity: "L",
   },
   {
@@ -6716,19 +7421,220 @@ var firstNames = [
     gender: "M",
     rarity: "L",
   },
+  {
+    value: "Aurore",
+    gender: "F",
+    rarity: "U",
+  },
+  {
+    value: "Mérida",
+    gender: "F",
+    rarity: "R",
+  },
+  {
+    value: "Pocahontas",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Raiponce",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Tiana",
+    gender: "F",
+    rarity: "U",
+  },
+  {
+    value: "Vaiana",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Hercule",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Kristoff",
+    gender: "M",
+    rarity: "R",
+  },
+  {
+    value: "Maui",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Naveen",
+    gender: "M",
+    rarity: "R",
+  },
+  {
+    value: "Phoebus",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Quasimodo",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Baloo",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Bambi",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Dingo",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Dumbo",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Jiminy",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Maléfique",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Minnie",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Nala",
+    gender: "F",
+    rarity: "R",
+  },
+  {
+    value: "Panpan",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Stitch",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Tic",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Tac",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Arlo",
+    gender: "M",
+    rarity: "U",
+  },
+  {
+    value: "Dory",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Ember",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Flash",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Joie",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Luca",
+    gender: "M",
+    rarity: "U",
+  },
+  {
+    value: "Miguel",
+    gender: "M",
+    rarity: "U",
+  },
+  {
+    value: "Nemo",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Sully",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Wall-E",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Cruella",
+    gender: "F",
+    rarity: "L",
+  },
+  {
+    value: "Jafar",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Kaa",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Scar",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Shan-Yu",
+    gender: "M",
+    rarity: "L",
+  },
+  {
+    value: "Yzma",
+    gender: "F",
+    rarity: "L",
+  },
 ];
 
 var lastNames = [
   "1664",
-  "2000",
-  "360 NoScope",
   "4G",
   "8.6",
   "Acide",
   "Action",
+  "Admin",
   "Ado",
   "Afterwork",
+  "Aimbot",
   "AK-47",
+  "Algorithme",
   "Aligot",
   "Allopass",
   "Ambiance",
@@ -6737,6 +7643,7 @@ var lastNames = [
   "Antifa",
   "Anus",
   "Apéro",
+  "API",
   "Arobase",
   "Attack",
   "Autogrill",
@@ -6757,6 +7664,7 @@ var lastNames = [
   "Barbecue",
   "Baston",
   "Bastos",
+  "Battle Pass",
   "Bazooka",
   "Bébé",
   "Bécane",
@@ -6769,6 +7677,7 @@ var lastNames = [
   "Biceps",
   "Bidoche",
   "Bidoune",
+  "Binaire",
   "Binocle",
   "Binouze",
   "Biscotte",
@@ -6820,12 +7729,14 @@ var lastNames = [
   "Caillou",
   "Camembert",
   "Cameroun",
+  "Campeur",
   "Canard",
   "Cancer",
   "Caniche",
   "Caniveau",
   "Canon",
   "Canyon",
+  "Captcha",
   "Carapuce",
   "Carcasse",
   "Carotte",
@@ -6849,6 +7760,7 @@ var lastNames = [
   "Charentaise",
   "Chatbot",
   "Chaussette",
+  "Cheater",
   "Cheddar",
   "Cheetos",
   "Chenille",
@@ -6862,6 +7774,7 @@ var lastNames = [
   "Chipolata",
   "Chips",
   "Choco",
+  "Chococino",
   "Chocogrenouille",
   "Chômage",
   "Chou-fleur",
@@ -6872,17 +7785,20 @@ var lastNames = [
   "Cigogne",
   "Citron",
   "Citrouille",
+  "Clan",
   "Claqué",
   "Claquette",
   "Claquos",
   "Clébard",
   "Clignotant",
+  "Cloud",
   "Coaching",
   "Coccyx",
   "Cochon",
   "Cocktail",
   "Coco",
   "Cocooning",
+  "Code source",
   "Coding",
   "Coiffure",
   "Coin-coin",
@@ -6892,6 +7808,7 @@ var lastNames = [
   "Connect",
   "Cookie",
   "Cool",
+  "Cooldown",
   "Coquillette",
   "Coquin",
   "Corniche",
@@ -6938,11 +7855,15 @@ var lastNames = [
   "Cyborg",
   "Dancefloor",
   "Dancing",
+  "Dark Web",
   "Deadline",
   "Débrouille",
+  "Debug",
   "Délice",
   "Délire",
   "Deluxe",
+  "Démo",
+  "Démolition",
   "Dentifrice",
   "Dépouille",
   "Déprime",
@@ -6955,10 +7876,13 @@ var lastNames = [
   "Dindon",
   "Dingo",
   "Disco",
+  "Discorde",
   "Djembé",
+  "DLC",
   "Dodo",
   "Dofus",
   "Doggy",
+  "Doggybag",
   "Dollar",
   "Donut",
   "Dorade",
@@ -6968,8 +7892,10 @@ var lastNames = [
   "Drift",
   "Drogue",
   "Droïde",
+  "Drop",
   "Duchesse",
   "Dumbledore",
+  "E-sport",
   "Ectasy",
   "Electronique",
   "Email",
@@ -6989,6 +7915,7 @@ var lastNames = [
   "FAQ",
   "Farci",
   "Farine",
+  "Farm",
   "Fashion",
   "Feedback",
   "Femelle",
@@ -6999,6 +7926,8 @@ var lastNames = [
   "Festin",
   "Filou",
   "Fion",
+  "Firewall",
+  "Firmware",
   "Flacon",
   "Flan",
   "Fléchette",
@@ -7016,6 +7945,7 @@ var lastNames = [
   "Fracas",
   "Frag",
   "Fragmovie",
+  "Fragueur",
   "Framework",
   "Frigide",
   "Frigo",
@@ -7027,15 +7957,19 @@ var lastNames = [
   "Frometon",
   "Frontend",
   "Frotti",
+  "Funk",
   "Furet",
   "Fusion",
   "Futur",
   "Gag",
+  "Game Master",
+  "Game Over",
   "Gamelle",
   "Gamer",
   "Gametag",
   "Gaming",
   "Gang",
+  "Gangsta",
   "Ganja",
   "Garage",
   "Gâteau",
@@ -7046,10 +7980,12 @@ var lastNames = [
   "Geek",
   "Gerbe",
   "Germignon",
+  "GG",
   "Ghetto",
   "Gigabyte",
   "Gitan",
   "Givre",
+  "Glitch",
   "Glouglou",
   "Gluten",
   "Gnocchi",
@@ -7070,6 +8006,7 @@ var lastNames = [
   "Gruyère",
   "Guacamole",
   "Gucci",
+  "Guedin",
   "Guenon",
   "Guépard",
   "Gun",
@@ -7078,6 +8015,7 @@ var lastNames = [
   "Hamster",
   "Harissa",
   "HDMI",
+  "Hitbox",
   "Houmous",
   "HTML",
   "Iench",
@@ -7092,6 +8030,7 @@ var lastNames = [
   "Joystick",
   "Judo",
   "Juif",
+  "K-pop",
   "Kalash",
   "Karaoké",
   "Kardashian",
@@ -7108,6 +8047,7 @@ var lastNames = [
   "Knacky",
   "L'Éponge",
   "Labrador",
+  "Lag",
   "Landing-Page",
   "Langouste",
   "Lapinou",
@@ -7125,6 +8065,7 @@ var lastNames = [
   "Live",
   "LOL",
   "Lombric",
+  "Loot",
   "Loukoum",
   "Loustic",
   "Lube",
@@ -7148,6 +8089,7 @@ var lastNames = [
   "Maroc",
   "Maroilles",
   "Massacre",
+  "Matchmaking",
   "Matos",
   "Matraque",
   "Maubeuge",
@@ -7159,6 +8101,7 @@ var lastNames = [
   "Mensonge",
   "Merguez",
   "Meringue",
+  "Métavers",
   "Mewtwo",
   "Miam",
   "Miaou",
@@ -7167,6 +8110,7 @@ var lastNames = [
   "Mimolette",
   "Minecraft",
   "Mix",
+  "MLG",
   "MMA",
   "MMORPG",
   "Moche",
@@ -7195,14 +8139,17 @@ var lastNames = [
   "Nightclub",
   "Niglo",
   "Nitro",
+  "No Scope",
   "Nocturne",
   "Nombril",
+  "Noob",
   "Noobie",
   "Nouille",
   "Nounours",
   "Nucléaire",
   "Nuggets",
   "Nuisible",
+  "One Shot",
   "Orteil",
   "OS",
   "Ouistiti",
@@ -7211,12 +8158,14 @@ var lastNames = [
   "Panique",
   "Paquerette",
   "Parapluie",
+  "Paroisse",
   "Passif",
   "Password",
   "Pastille",
   "Pastis",
   "Patate",
   "Pâté",
+  "Pay-to-win",
   "PDF",
   "Péché",
   "Peperoni",
@@ -7233,11 +8182,13 @@ var lastNames = [
   "Pilou",
   "Pinard",
   "Pincette",
+  "Ping",
   "Ping-Pong",
   "Pipi",
   "Pisse",
   "Pistachos",
   "Pistou",
+  "Pixel",
   "Pizza",
   "PizzaPlanet",
   "Placenta",
@@ -7254,6 +8205,7 @@ var lastNames = [
   "Poivron",
   "Pokémon",
   "Poker",
+  "Pompon",
   "Pop",
   "Porn",
   "Porno",
@@ -7277,13 +8229,16 @@ var lastNames = [
   "Prod",
   "Production",
   "Promo",
+  "Prompt",
   "Prostate",
   "Prout",
+  "Proxy",
   "PSN",
   "Putaclic",
   "Putois",
   "Pyrex",
   "Python",
+  "QR Code",
   "Quadriceps",
   "Queer",
   "Quiche",
@@ -7294,9 +8249,11 @@ var lastNames = [
   "Raclette",
   "Radiateur",
   "Rage",
+  "Ragequit",
   "Ragnagna",
   "Ragondin",
   "Ramadan",
+  "Rap",
   "Raquette",
   "Rasoir",
   "Ratal",
@@ -7304,10 +8261,12 @@ var lastNames = [
   "Ravioli",
   "Réac'",
   "Reblochon",
+  "Reboot",
   "Rectal",
   "Reptile",
   "République",
   "Réseau",
+  "Respawn",
   "Retard",
   "Ricochet",
   "Rigolo",
@@ -7316,6 +8275,7 @@ var lastNames = [
   "Roadmap",
   "Rock",
   "Rognon",
+  "Romcom",
   "Rond-point",
   "Rongeur",
   "Roquefort",
@@ -7324,6 +8284,7 @@ var lastNames = [
   "Roulette",
   "Roupette",
   "RPG",
+  "Rush",
   "Saindoux",
   "Samuraï",
   "Sandale",
@@ -7342,6 +8303,7 @@ var lastNames = [
   "Semoule",
   "Senpaï",
   "SEO",
+  "Serveur",
   "Sex",
   "Sexy",
   "Shoah",
@@ -7350,6 +8312,9 @@ var lastNames = [
   "Shot",
   "Shotgun",
   "Shrek",
+  "Skill",
+  "Skin",
+  "Skyblog",
   "Skywalker",
   "Slibard",
   "Slibouze",
@@ -7361,6 +8326,7 @@ var lastNames = [
   "Snicker",
   "Social",
   "Soda",
+  "Soja",
   "Souffrance",
   "Souillon",
   "Soupçon",
@@ -7369,6 +8335,8 @@ var lastNames = [
   "Spaghetti",
   "SPAS-12",
   "Spatial",
+  "Spawn",
+  "Speedrun",
   "Sphincter",
   "Sport",
   "Steak",
@@ -7405,9 +8373,13 @@ var lastNames = [
   "Tatooïne",
   "Taupe",
   "Team",
+  "TeamSpeak",
+  "Techno",
   "Teckel",
+  "Tecro",
   "Téléthon",
   "Tempo",
+  "Teprou",
   "Terreur",
   "Terrine",
   "Testiboule",
@@ -7419,6 +8391,7 @@ var lastNames = [
   "Tigrou",
   "Time",
   "Toast",
+  "Tofu",
   "Toilette",
   "Tolérance",
   "Torpille",
@@ -7437,21 +8410,26 @@ var lastNames = [
   "Tringle",
   "Trique",
   "Triton",
+  "Trollface",
   "Trolling",
   "Tropique",
   "Trou-de-balle",
   "Truffade",
   "Truie",
+  "Tryhard",
   "Tuning",
   "Turbo",
   "Twitter",
   "Twix",
   "Update",
+  "Upload",
+  "USB",
   "USP-45",
   "Vador",
   "Varan",
   "Varech",
   "Vasectomie",
+  "Vegan",
   "Vélux",
   "Venin",
   "Verge",
@@ -7462,6 +8440,7 @@ var lastNames = [
   "Viking",
   "Vintage",
   "Violence",
+  "Virtualisation",
   "Virus",
   "Viscère",
   "Vlog",
@@ -7475,6 +8454,7 @@ var lastNames = [
   "Webinar",
   "Webmastering",
   "Weed",
+  "Whiskas",
   "Whisky",
   "Widget",
   "Wifi",
@@ -7483,11 +8463,15 @@ var lastNames = [
   "Wordpress",
   "Xanax",
   "Xbox",
+  "XP",
   "Yaourt",
   "Yaourtière",
+  "YOLO",
   "Youtube",
   "Yoyo",
   "Zanzibar",
+  "Zarba",
+  "Zarbi",
   "Zézette",
   "Zgueg",
   "Zigzag",
@@ -7499,6 +8483,7 @@ var lastNames = [
   "Zouk",
   "Zoulette",
   "Zoulou",
+  "Zozo",
 ];
 
 var titles = [
@@ -7531,6 +8516,14 @@ var titles = [
     gender: "M",
   },
   {
+    value: "Archiduc",
+    gender: "M",
+  },
+  {
+    value: "Archiduchesse",
+    gender: "F",
+  },
+  {
     value: "Baron",
     gender: "M",
   },
@@ -7556,6 +8549,22 @@ var titles = [
   },
   {
     value: "Cheffe",
+    gender: "F",
+  },
+  {
+    value: "Chevalier",
+    gender: "M",
+  },
+  {
+    value: "Chevalière",
+    gender: "F",
+  },
+  {
+    value: "Coach",
+    gender: "M",
+  },
+  {
+    value: "Coach",
     gender: "F",
   },
   {
@@ -7625,6 +8634,10 @@ var titles = [
   {
     value: "Grande Gouroue",
     gender: "F",
+  },
+  {
+    value: "Herr",
+    gender: "M",
   },
   {
     value: "Impératrice",
@@ -7727,6 +8740,10 @@ var titles = [
     gender: "F",
   },
   {
+    value: "Prince",
+    gender: "M",
+  },
+  {
     value: "Princesse",
     gender: "F",
   },
@@ -7737,6 +8754,14 @@ var titles = [
   {
     value: "Professeur",
     gender: "M",
+  },
+  {
+    value: "Prophète",
+    gender: "M",
+  },
+  {
+    value: "Prophète",
+    gender: "F",
   },
   {
     value: "Reine",
@@ -7847,6 +8872,14 @@ var titles = [
     gender: "M",
   },
   {
+    value: "Tsar",
+    gender: "M",
+  },
+  {
+    value: "Tsarine",
+    gender: "F",
+  },
+  {
     value: "Vice-reine",
     gender: "F",
   },
@@ -7863,6 +8896,10 @@ var titles = [
 var firstNamePrefixes = [
   {
     value: "Abdel",
+    gender: "M",
+  },
+  {
+    value: "André",
     gender: "M",
   },
   {
@@ -7886,6 +8923,10 @@ var firstNamePrefixes = [
     gender: "M",
   },
   {
+    value: "Jacques",
+    gender: "M",
+  },
+  {
     value: "Jean",
     gender: "M",
   },
@@ -7898,8 +8939,16 @@ var firstNamePrefixes = [
     gender: "M",
   },
   {
+    value: "Louise",
+    gender: "F",
+  },
+  {
     value: "Marc",
     gender: "M",
+  },
+  {
+    value: "Maria",
+    gender: "F",
   },
   {
     value: "Marie",
@@ -7910,8 +8959,24 @@ var firstNamePrefixes = [
     gender: "M",
   },
   {
+    value: "Mohammed",
+    gender: "M",
+  },
+  {
+    value: "Paul",
+    gender: "M",
+  },
+  {
+    value: "Philippe",
+    gender: "M",
+  },
+  {
     value: "Pierre",
     gender: "M",
+  },
+  {
+    value: "Rose",
+    gender: "F",
   },
 ];
 
@@ -7921,8 +8986,10 @@ var lastNamePrefixes = [
   "Baby ",
   "Bat",
   "ben ",
+  "Bat-",
   "Big ",
   "Black ",
+  "Choco-",
   "Cosmo ",
   "Crousti-",
   "Crypto-",
@@ -7931,9 +8998,9 @@ var lastNamePrefixes = [
   "de ",
   "del ",
   "Di ",
-  "Disco ",
+  "Disco-",
   "Double ",
-  "e",
+  "e-",
   "Electro-",
   "Fitz ",
   "Giga ",
@@ -7956,6 +9023,8 @@ var lastNamePrefixes = [
   "Space ",
   "Spider-",
   "Super-",
+  "Team ",
+  "Techno-",
   "Télé-",
   "Trans-",
   "Triple ",
@@ -7968,8 +9037,13 @@ var lastNamePrefixes = [
 ];
 
 var lastNameSuffixes = [
+  " 2000",
+  " 2.0",
+  " 3.0",
+  " Deluxe",
   " Jr.",
   " Sr.",
+  "-bot",
   "-chan",
   "-land",
   "-mania",
@@ -7980,5 +9054,6 @@ var lastNameSuffixes = [
   "-sensei",
   "ovitch",
   "poulos",
+  "ski",
   "son",
 ];

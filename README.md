@@ -164,10 +164,10 @@ PhilippeMarmotte.getNamesPossibilities();
 // 128842074132480
 
 PhilippeMarmotte.formatNumber(PhilippeMarmotte.getNamesPossibilities());
-// "128 842 074 132 480"
+// "2 407 420 800 388 800"
 
 PhilippeMarmotte.version;
-// "1.0.0"
+// "1.2.0"
 ```
 
 ## Distribution

@@ -137,7 +137,7 @@
       return "";
     }
 
-    if (getRandomIntBetween(1, 100) <= 10) {
+    if (getRandomIntBetween(1, 100) <= 15) {
       selectedPrefixes = firstNamePrefixes.filter(function (name) {
         return name.gender === firstName.gender;
       });
@@ -150,7 +150,7 @@
 
   function getRandomLastName() {
     var prefix =
-      getRandomIntBetween(1, 100) <= 10
+      getRandomIntBetween(1, 100) <= 15
         ? getRandomValueFromArray(lastNamePrefixes) || ""
         : "";
     var lastName =
@@ -158,7 +158,7 @@
         ? getRandomFirstName("M")
         : getRandomValueFromArray(lastNames) || "";
     var secondName =
-      getRandomIntBetween(1, 100) <= 7
+      getRandomIntBetween(1, 100) <= 10
         ? "-" + (getRandomValueFromArray(lastNames) || "")
         : "";
     var suffix =
